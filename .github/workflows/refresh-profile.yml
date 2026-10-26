@@ -1,0 +1,41 @@
+name: Refresh public LeetCode data
+
+on:
+  schedule:
+    - cron: "23 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-profile-data
+  cancel-in-progress: false
+
+jobs:
+  refresh-leetcode:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out portfolio
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Refresh public LeetCode data
+        env:
+          LEETCODE_USERNAME: aditya__bisht
+        run: python scripts/refresh_leetcode.py
+      - name: Commit refreshed data
+        run: |
+          if git diff --quiet -- data/leetcode.json; then
+            echo "No profile changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/leetcode.json
+          git commit -m "chore: refresh public LeetCode data"
+          git push
+
+
