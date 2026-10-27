@@ -33,3 +33,10 @@ body{background:radial-gradient(ellipse at 83% 8%,rgba(181,160,255,.13),transpar
 @media(max-width:900px){.hero{min-height:unset;gap:40px;padding-top:70px;padding-bottom:90px}.portrait-card{height:390px}.project-card:nth-child(n){grid-column:span 6}.project-visual{height:200px}}
 @media(max-width:680px){.hero{padding-top:54px;padding-bottom:75px;gap:35px}.hero h1{font-size:clamp(52px,14vw,74px)}.hero-intro{font-size:15px}.portrait-card{width:min(100%,430px);height:350px;justify-self:center}.portrait-core{width:180px;height:180px}.portrait-core span{font-size:70px}.section{padding-top:78px;padding-bottom:82px}.section-heading{align-items:flex-start;flex-direction:column;gap:12px}.project-grid{grid-template-columns:minmax(0,1fr);gap:15px}.project-card:nth-child(n){grid-column:1}.project-visual{height:205px}.about-inner{padding-top:62px;padding-bottom:62px}.contact-section{padding:76px 22px 84px}}
 @media(prefers-reduced-motion:reduce){.project-card:hover{transform:none}}
+
+/* Pointer-lit dimensional hero inspired by ThreeUI's authored WebGL scenes. */
+.portrait-card{perspective:1100px;transform-style:preserve-3d;will-change:transform;background:radial-gradient(ellipse at var(--pointer-x,52%) var(--pointer-y,42%),rgba(181,160,255,.23),transparent 38%),radial-gradient(ellipse at 18% 90%,rgba(115,245,166,.12),transparent 44%),linear-gradient(145deg,#172137,#0b101b 72%)}
+.portrait-core{transform-style:preserve-3d;will-change:transform}
+.portrait-ring{transform-style:preserve-3d;will-change:transform}
+@media(max-width:680px){.portrait-card{perspective:none;will-change:auto}}
+@media(prefers-reduced-motion:reduce){.portrait-card,.portrait-core,.portrait-ring{transform:none!important;will-change:auto}}
