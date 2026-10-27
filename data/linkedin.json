@@ -2,8 +2,29 @@
   "source": "manual",
   "updatedAt": "2026-10-27",
   "posts": [
-    {"title": "Cisco Packet Tracer and networking fundamentals", "text": "Completed Cisco Networking Academy’s Getting Started with Cisco Packet Tracer program. Practicing network topologies, data flow, and how devices communicate.", "date": "2026-10-24", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519657696204087296/"},
-    {"title": "AI Tools Workshop by be10x", "text": "Workshop takeaways: clearer prompt engineering, practical AI workflows, and choosing the right tool for the task. Continuing to apply these ideas to projects and learning.", "date": "2026-09-16", "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505695802053349376/"}
-  ]
+    {
+      "title": "Cisco Packet Tracer and networking fundamentals",
+      "text": "Completed Cisco Networking Academy’s Getting Started with Cisco Packet Tracer program. Practicing network topologies, data flow, and how devices communicate.",
+      "date": "2026-10-24",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519657696204087296/"
+    },
+    {
+      "title": "AI Tools Workshop by be10x",
+      "text": "Workshop takeaways: clearer prompt engineering, practical AI workflows, and choosing the right tool for the task. Continuing to apply these ideas to projects and learning.",
+      "date": "2026-09-16",
+      "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505695802053349376/"
+    }
+  ],
+  "about": {
+    "paragraphs": [
+      "I’m a B.Tech student specializing in Artificial Intelligence & Machine Learning at Vivekananda Institute of Professional Studies – Technical Campus. Recent learning has focused on prompt engineering, practical AI workflows, and choosing the right tools for research, productivity, and technical tasks.",
+      "I’m also strengthening my networking fundamentals through Cisco Packet Tracer, practicing network topologies, data flow, and how devices communicate. I’m applying what I learn through hands-on projects as I explore AI and software development."
+    ],
+    "learningAreas": [
+      "Prompt engineering",
+      "Practical AI workflows",
+      "Networking fundamentals",
+      "Hands-on AI and software projects"
+    ]
+  }
 }
-
