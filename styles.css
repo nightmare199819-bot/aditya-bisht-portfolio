@@ -212,3 +212,12 @@ h1 em,h2 em{color:#D8BC82}
 }
 
 html,body{max-width:100%;overflow-x:clip}
+
+/* Final fit and headline lockup */
+html{overflow-x:hidden}
+.hero{overflow-x:clip;padding-top:54px;padding-bottom:88px}
+.hero h1 em{display:block;font-size:.76em;line-height:1.06;letter-spacing:-.07em;white-space:nowrap}
+.portrait-card{height:440px}
+.contact-section{overflow-x:clip}
+@media(max-width:1100px){.hero{padding-top:50px;padding-bottom:82px}.portrait-card{height:410px}.hero h1 em{font-size:.73em}}
+@media(max-width:680px){.hero{padding-top:34px;padding-bottom:74px}.portrait-card{height:300px}.hero h1 em{font-size:.78em;white-space:normal}}
