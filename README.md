@@ -28,7 +28,7 @@ For scheduled commits to work, enable **Settings → Actions → General → Wor
 
 ### LinkedIn
 
-The page includes manually curated excerpts from two recent profile posts. Edit `data/linkedin.json` to refresh the excerpts or add up to three entries. Use public post links and excerpts you are comfortable displaying. LinkedIn’s member-post read permission (`r_member_social`) is restricted to approved applications, so this site does not scrape LinkedIn or store credentials. See the [LinkedIn Posts API permissions](https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api) documentation.
+The current About summary and learning areas are synthesized from the curated post takeaways in `data/linkedin.json`. The page renders those fields automatically whenever the JSON changes. Add or revise posts, then update the `about.paragraphs` and `about.learningAreas` fields to keep the summary grounded in the latest learning.\n\nLinkedIn does not provide this site with automatic access to personal posts: its Posts API requires the restricted `r_member_social` permission, which is available only to approved applications. Until that access is configured, new posts must be added to the curated data file. The site does not scrape LinkedIn or store credentials. See the [LinkedIn Posts API permissions](https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api) documentation.
 
 ## Motion and visual treatment
 
