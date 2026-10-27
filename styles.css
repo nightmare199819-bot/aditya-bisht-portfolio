@@ -210,3 +210,5 @@ h1 em,h2 em{color:#D8BC82}
  .reveal,.reveal[data-reveal="from-left"],.reveal[data-reveal="from-right"],.reveal[data-reveal="zoom"]{opacity:1;transform:none;filter:none;transition:none;will-change:auto}
  .project-card.reveal.is-visible .project-visual{animation:none}
 }
+
+html,body{max-width:100%;overflow-x:clip}
