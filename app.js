@@ -76,3 +76,27 @@ Promise.all([
   if (leetcode) renderLeetCode(leetcode);
 });
 
+
+
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (!reduceMotion && "IntersectionObserver" in window) {
+  const revealItems = document.querySelectorAll(".section-heading, .project-card, .about-copy, .focus-card, .activity-panel, .contact-section .eyebrow, .contact-section h2, .contact-section .button");
+  revealItems.forEach((item) => item.classList.add("reveal"));
+  const observer = new IntersectionObserver((entries, activeObserver) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        activeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.14, rootMargin: "0px 0px -35px 0px" });
+  revealItems.forEach((item) => observer.observe(item));
+}
+
+document.querySelectorAll(".project-card").forEach((card) => {
+  card.addEventListener("pointermove", (event) => {
+    const bounds = card.getBoundingClientRect();
+    card.style.setProperty("--mx", `${event.clientX - bounds.left}px`);
+    card.style.setProperty("--my", `${event.clientY - bounds.top}px`);
+  });
+});
