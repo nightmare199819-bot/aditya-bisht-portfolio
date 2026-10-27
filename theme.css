@@ -1,4 +1,3 @@
-/* Portfolio art direction: midnight ink, soft mint, and violet. */
 :root{--navy:#080b12;--violet:#151c31;--gold:#9efc68;--ivory:#f3f5f2;--slate:#171e2c;--muted:#a7b1c2;--line:rgba(214,229,255,.12);--emerald:#73f5a6;--lime:#b6ff80;--crimson:#a78bfa;--burgundy:#33254f}
 html{background:var(--navy)}body{background:radial-gradient(ellipse at 76% 5%,rgba(115,245,166,.10),transparent 34rem),radial-gradient(ellipse at 8% 34%,rgba(167,139,250,.09),transparent 30rem),var(--navy);color:var(--ivory)}
 .site-header{background:rgba(8,11,18,.84);border-bottom-color:var(--line);box-shadow:0 8px 30px rgba(0,0,0,.16)}
