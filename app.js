@@ -11,13 +11,15 @@ menuButton?.addEventListener("click", () => {
 
 navigation?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
-    navigation.classList.remove("is-open");
+    navigation?.classList.remove("is-open");
     menuButton?.setAttribute("aria-expanded", "false");
     menuButton?.setAttribute("aria-label", "Open navigation");
   });
 });
 
-$("#year").textContent = new Date().getFullYear();
+const year = $("#year");
+if (year) year.textContent = new Date().getFullYear();
+
 const formatDate = (value) => {
   const date = new Date(value);
   return Number.isNaN(date.getTime()) ? "" : new Intl.DateTimeFormat(undefined, { dateStyle: "medium" }).format(date);
@@ -35,7 +37,7 @@ function renderAbout(about) {
       const item = document.createElement("li");
       const number = document.createElement("span");
       number.textContent = String(index + 1).padStart(2, "0");
-      item.append(number, document.createTextNode(area));
+      item.append(number, document.createTextNode(String(area)));
       return item;
     }));
   }
@@ -46,37 +48,54 @@ function renderLinkedIn(data) {
   renderAbout(data.about);
   if (!Array.isArray(data.posts) || data.posts.length === 0) return;
   const feed = $("#linkedin-feed");
+  if (!feed) return;
   feed.replaceChildren(...data.posts.slice(0, 3).map((post) => {
     const article = document.createElement("article");
     article.className = "feed-item";
     const anchor = document.createElement("a");
-    anchor.href = post.url || "https://www.linkedin.com/in/aditya-bisht-b3a12036b";
+    const fallback = "https://www.linkedin.com/in/aditya-bisht-b3a12036b";
+    let href = fallback;
+    try {
+      const parsed = new URL(post.url || fallback);
+      if (parsed.protocol === "https:" && (parsed.hostname === "www.linkedin.com" || parsed.hostname === "linkedin.com")) href = parsed.href;
+    } catch { /* Keep the safe profile fallback. */ }
+    anchor.href = href;
     anchor.target = "_blank";
-    anchor.rel = "noreferrer";
-    anchor.textContent = post.text || post.title || "View LinkedIn post";
+    anchor.rel = "noopener noreferrer";
+    anchor.textContent = String(post.text || post.title || "View LinkedIn post");
     const time = document.createElement("time");
-    if (post.date) time.dateTime = post.date;
+    if (post.date) time.dateTime = String(post.date);
     time.textContent = formatDate(post.date);
     article.append(anchor, time);
     return article;
   }));
-  $("#linkedin-source").textContent = data.updatedAt ? `CURATED FROM LINKEDIN · UPDATED ${formatDate(data.updatedAt).toUpperCase()}` : "CURATED FROM LINKEDIN";
+  const source = $("#linkedin-source");
+  if (source) source.textContent = data.updatedAt ? `CURATED FROM LINKEDIN · UPDATED ${formatDate(data.updatedAt).toUpperCase()}` : "CURATED FROM LINKEDIN";
 }
 
 function renderLeetCode(data) {
-  if (!data.stats) return;
+  if (!data || !data.stats) return;
   const fields = [["total", "totalSolved"], ["easy", "easySolved"], ["medium", "mediumSolved"], ["hard", "hardSolved"]];
-  fields.forEach(([id, key]) => { $("#" + id).textContent = data.stats[key] ?? "—"; });
+  fields.forEach(([id, key]) => {
+    const node = $("#" + id);
+    if (node) node.textContent = String(data.stats[key] ?? "—");
+  });
   if (Array.isArray(data.recent) && data.recent.length) {
     const feed = $("#leetcode-feed");
-    feed.replaceChildren(...data.recent.slice(0, 3).map((submission) => {
+    if (feed) feed.replaceChildren(...data.recent.slice(0, 3).map((submission) => {
       const article = document.createElement("article");
       article.className = "feed-item";
       const anchor = document.createElement("a");
-      anchor.href = submission.url || "https://leetcode.com/u/aditya__bisht/";
+      const fallback = "https://leetcode.com/u/aditya__bisht/";
+      let href = fallback;
+      try {
+        const parsed = new URL(submission.url || fallback);
+        if (parsed.protocol === "https:" && parsed.hostname === "leetcode.com") href = parsed.href;
+      } catch { /* Keep the safe profile fallback. */ }
+      anchor.href = href;
       anchor.target = "_blank";
-      anchor.rel = "noreferrer";
-      anchor.textContent = submission.title || "Accepted problem";
+      anchor.rel = "noopener noreferrer";
+      anchor.textContent = String(submission.title || "Accepted problem");
       const meta = document.createElement("span");
       meta.className = "feed-meta";
       meta.textContent = [submission.status || "Accepted", formatDate(submission.date)].filter(Boolean).join(" · ");
@@ -84,8 +103,11 @@ function renderLeetCode(data) {
       return article;
     }));
   }
-  const updated = data.updatedAt ? formatDate(data.updatedAt).toUpperCase() : "DATE NOT RECORDED";
-  $("#leetcode-source").textContent = `${data.source === "live" ? "PUBLIC PROFILE · UPDATED" : "MANUAL DATA · UPDATED"} ${updated}`;
+  const source = $("#leetcode-source");
+  if (source) {
+    const updated = data.updatedAt ? formatDate(data.updatedAt).toUpperCase() : "DATE NOT RECORDED";
+    source.textContent = `${data.source === "live" ? "PUBLIC PROFILE · UPDATED" : "MANUAL DATA · UPDATED"} ${updated}`;
+  }
 }
 
 Promise.all([
@@ -96,48 +118,25 @@ Promise.all([
   if (leetcode) renderLeetCode(leetcode);
 });
 
-
-
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 if (!reduceMotion && "IntersectionObserver" in window) {
   const revealItems = [
     ...document.querySelectorAll(".section-heading"),
     ...document.querySelectorAll(".project-card"),
     ...document.querySelectorAll(".about-monogram, .about-copy, .focus-card, .activity-panel"),
-    ...document.querySelectorAll(".contact-section .eyebrow, .contact-section h2, .contact-section .button"),
+    ...document.querySelectorAll(".contact-section .eyebrow, .contact-section h2, .contact-section .contact-copy, .contact-section .button"),
   ];
   revealItems.forEach((item, index) => {
     item.classList.add("reveal");
-    if (item.matches(".project-card")) {
-      item.dataset.reveal = "zoom";
-      const cardIndex = [...item.parentElement.children].indexOf(item);
-      item.style.transitionDelay = `${cardIndex * 130}ms`;
-    } else if (item.matches(".about-monogram, .activity-panel:nth-child(odd), .section-heading")) {
-      item.dataset.reveal = "from-left";
-    } else if (item.matches(".about-copy, .activity-panel:nth-child(even)")) {
-      item.dataset.reveal = "from-right";
-    } else {
-      item.dataset.reveal = "zoom";
-    }
+    if (item.matches(".project-card")) item.style.setProperty("--delay", `${(index % 4) * 75}ms`);
   });
   const observer = new IntersectionObserver((entries, activeObserver) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("is-visible");
-        entry.target.addEventListener("transitionend", () => {
-          entry.target.style.willChange = "auto";
-        }, { once: true });
         activeObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
+  }, { threshold: 0.14, rootMargin: "0px 0px -7% 0px" });
   revealItems.forEach((item) => observer.observe(item));
 }
-
-document.querySelectorAll(".project-card").forEach((card) => {
-  card.addEventListener("pointermove", (event) => {
-    const bounds = card.getBoundingClientRect();
-    card.style.setProperty("--mx", `${event.clientX - bounds.left}px`);
-    card.style.setProperty("--my", `${event.clientY - bounds.top}px`);
-  });
-});
