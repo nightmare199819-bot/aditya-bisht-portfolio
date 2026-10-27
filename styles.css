@@ -45,3 +45,18 @@
 @keyframes plant-sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
 @media(max-width:680px){.hero:before{inset:4% -30% 35% 0}.portrait-card{animation-delay:.08s}.reveal{transform:translateY(14px)}}
 @media(prefers-reduced-motion:reduce){.hero-copy>*,.portrait-card,.portrait-ring,.portrait-label span:last-child,.aquire-orbit,.aquire-letter,.chain-symbol,.chain-symbol b,.sun,.plant,.contact-orbit,.hero:before{animation:none!important}.reveal{opacity:1;transform:none;transition:none}}
+
+.project-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.project-devtrack{background:linear-gradient(150deg,rgba(52,32,79,.43),rgba(24,29,48,.9))}
+.visual-devtrack{background:radial-gradient(ellipse at 50% 120%,rgba(93,72,128,.65),transparent 60%),linear-gradient(135deg,#182236,#24203b)}
+.visual-devtrack:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 48%,rgba(198,167,106,.12),transparent 36%)}
+.devtrack-grid{position:absolute;inset:18px;opacity:.34;background-image:linear-gradient(rgba(198,167,106,.2) 1px,transparent 1px),linear-gradient(90deg,rgba(198,167,106,.2) 1px,transparent 1px);background-size:24px 24px;mask-image:radial-gradient(ellipse,#000,transparent 75%)}
+.devtrack-mark{position:relative;width:76px;height:76px;border:1px solid rgba(198,167,106,.64);border-radius:50%;display:grid;place-items:center;transform:rotate(-32deg);box-shadow:0 0 36px rgba(198,167,106,.08);animation:devtrack-pulse 5s ease-in-out infinite}
+.devtrack-mark:before,.devtrack-mark:after{content:"";position:absolute;width:42px;height:42px;border:1px solid rgba(233,228,218,.65);border-radius:50%}
+.devtrack-mark:before{transform:translate(-14px,-2px)}.devtrack-mark:after{transform:translate(14px,2px)}
+.devtrack-mark span{position:absolute;width:4px;height:4px;background:var(--gold);border-radius:50%;z-index:1}.devtrack-mark span:nth-child(1){transform:translate(-25px,-12px)}.devtrack-mark span:nth-child(2){transform:translate(24px,15px)}.devtrack-mark span:nth-child(3){transform:translate(0,-34px)}
+.project-body h3 a{display:inline-flex;align-items:center;gap:8px}.project-arrow{font:12px var(--sans);color:var(--gold);transition:transform .2s}.project-body h3 a:hover .project-arrow{transform:translate(3px,-3px)}
+@keyframes devtrack-pulse{0%,100%{box-shadow:0 0 24px rgba(198,167,106,.06);transform:rotate(-32deg) scale(.96)}50%{box-shadow:0 0 42px rgba(198,167,106,.19);transform:rotate(-20deg) scale(1.04)}}
+@media(max-width:980px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.project-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.devtrack-mark{animation:none}}
