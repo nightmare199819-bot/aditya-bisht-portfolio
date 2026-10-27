@@ -30,6 +30,10 @@ For scheduled commits to work, enable **Settings → Actions → General → Wor
 
 The page includes manually curated excerpts from two recent profile posts. Edit `data/linkedin.json` to refresh the excerpts or add up to three entries. Use public post links and excerpts you are comfortable displaying. LinkedIn’s member-post read permission (`r_member_social`) is restricted to approved applications, so this site does not scrape LinkedIn or store credentials. See the [LinkedIn Posts API permissions](https://learn.microsoft.com/en-us/linkedin/marketing/community-management/shares/posts-api) documentation.
 
+## Motion and visual treatment
+
+The visual system uses animated orbital linework, softly moving project illustrations, warm hover lighting, and scroll reveals to give the page more graphic depth. Motion stays restrained so the content remains easy to read. Scroll reveals only activate when JavaScript, `IntersectionObserver`, and the visitor’s motion preference allow them. The `prefers-reduced-motion` setting disables decorative animation and reveals content immediately.
+
 ## Accessibility and responsive behavior
 
 The page includes a skip link, visible keyboard focus, semantic page sections, a labeled mobile menu, descriptive image text, and reduced-motion handling. Layout adapts for phones and tablets. Google Fonts have system fallbacks.
