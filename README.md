@@ -5,7 +5,7 @@ A responsive personal portfolio shaped around the profile and public posts share
 ## Design
 
 - Midnight navy `#101426`, royal violet `#34204F`, champagne gold `#C6A76A`, ivory `#E9E4DA`, and slate `#202A3A`.
-- Playfair Display headlines with Space Grotesk interface and body text.
+- Sora headings with DM Sans interface and body text, using larger type for comfortable reading.
 - AB monogram profile placeholder, responsive mobile navigation, keyboard focus styles, semantic landmarks, and reduced-motion support.
 
 ## Run and publish
@@ -32,7 +32,7 @@ The page includes manually curated excerpts from two recent profile posts. Edit 
 
 ## Motion and visual treatment
 
-The visual system uses animated orbital linework, softly moving project illustrations, warm hover lighting, and scroll reveals to give the page more graphic depth. Motion stays restrained so the content remains easy to read. Scroll reveals only activate when JavaScript, `IntersectionObserver`, and the visitor’s motion preference allow them. The `prefers-reduced-motion` setting disables decorative animation and reveals content immediately.
+The visual system uses animated orbital linework, moving project illustrations, directional and staggered scroll reveals, and warm hover lighting. Type and contrast are sized for easier reading. Scroll reveals only activate when JavaScript, `IntersectionObserver`, and the visitor’s motion preference allow them. The `prefers-reduced-motion` setting disables decorative animation and reveals content immediately.
 
 ## Accessibility and responsive behavior
 
