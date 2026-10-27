@@ -64,3 +64,9 @@ body{background:radial-gradient(ellipse at 83% 8%,rgba(181,160,255,.13),transpar
 .portrait-card.webgl-ready .portrait-core i{display:none}
 .portrait-card .portrait-label,.portrait-card .corner{z-index:3}
 @media(prefers-reduced-motion:reduce){.hero-webgl{transition:none}}
+
+/* Use the supplied portrait as the focal point while keeping the orbital scene visible. */
+.portrait-photo{position:relative;z-index:2;display:block;width:min(72%,300px);height:78%;object-fit:cover;object-position:48% 26%;border:1px solid rgba(226,237,255,.38);border-radius:46% 46% 22px 22px;box-shadow:0 24px 65px rgba(0,0,0,.4),0 0 42px rgba(181,160,255,.15);transform:translateZ(34px);animation:portrait-float 4.2s ease-in-out infinite}
+@keyframes portrait-float{0%,100%{translate:0 0 0}50%{translate:0 -8px 0}}
+@media(max-width:680px){.portrait-photo{height:78%;width:min(76%,300px);object-position:48% 25%}}
+@media(prefers-reduced-motion:reduce){.portrait-photo{animation:none}}
