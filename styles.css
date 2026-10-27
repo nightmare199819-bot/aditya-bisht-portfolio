@@ -46,7 +46,7 @@
 @media(max-width:680px){.hero:before{inset:4% -30% 35% 0}.portrait-card{animation-delay:.08s}.reveal{transform:translateY(14px)}}
 @media(prefers-reduced-motion:reduce){.hero-copy>*,.portrait-card,.portrait-ring,.portrait-label span:last-child,.aquire-orbit,.aquire-letter,.chain-symbol,.chain-symbol b,.sun,.plant,.contact-orbit,.hero:before{animation:none!important}.reveal{opacity:1;transform:none;transition:none}}
 
-.project-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 .project-devtrack{background:linear-gradient(150deg,rgba(52,32,79,.43),rgba(24,29,48,.9))}
 .visual-devtrack{background:radial-gradient(ellipse at 50% 120%,rgba(93,72,128,.65),transparent 60%),linear-gradient(135deg,#182236,#24203b)}
 .visual-devtrack:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 48%,rgba(198,167,106,.12),transparent 36%)}
