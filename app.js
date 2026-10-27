@@ -119,7 +119,96 @@ Promise.all([
 });
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-if (!reduceMotion && "IntersectionObserver" in window) {
+const canUseGsap = !reduceMotion && window.gsap && window.ScrollTrigger;
+
+if (canUseGsap) {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const heroItems = document.querySelectorAll(".hero-copy .eyebrow, .hero-copy h1, .hero-copy .hero-intro, .hero-copy .hero-tags, .hero-copy .hero-actions, .hero-copy .hero-foot");
+  gsap.from(heroItems, {
+    autoAlpha: 0,
+    y: 24,
+    duration: 0.8,
+    stagger: 0.09,
+    ease: "power3.out",
+    delay: 0.12,
+  });
+  gsap.from(".portrait-card", {
+    autoAlpha: 0,
+    y: 28,
+    scale: 0.97,
+    duration: 1.1,
+    ease: "power3.out",
+    delay: 0.28,
+  });
+
+  const revealItems = document.querySelectorAll(
+    ".section-heading, .project-card, .about-monogram, .about-copy, .focus-card, .activity-panel, .contact-section .eyebrow, .contact-section h2, .contact-section .contact-copy, .contact-section .button"
+  );
+  revealItems.forEach((item, index) => {
+    gsap.fromTo(item,
+      { autoAlpha: 0, y: 28 },
+      {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.72,
+        delay: item.matches(".project-card") ? (index % 4) * 0.08 : 0,
+        ease: "power3.out",
+        scrollTrigger: { trigger: item, start: "top 88%", once: true },
+      }
+    );
+  });
+
+  const scene = $(".portrait-card");
+  const core = $(".portrait-core");
+  const rings = document.querySelectorAll(".portrait-ring");
+  if (scene && core && window.matchMedia("(pointer: fine)").matches) {
+    scene.addEventListener("pointermove", (event) => {
+      const bounds = scene.getBoundingClientRect();
+      const x = (event.clientX - bounds.left) / bounds.width;
+      const y = (event.clientY - bounds.top) / bounds.height;
+      scene.style.setProperty("--pointer-x", `${x * 100}%`);
+      scene.style.setProperty("--pointer-y", `${y * 100}%`);
+      gsap.to(scene, {
+        rotateY: (x - 0.5) * 8,
+        rotateX: (0.5 - y) * 6,
+        duration: 0.55,
+        ease: "power3.out",
+        transformPerspective: 1100,
+        overwrite: true,
+      });
+      gsap.to(core, {
+        rotateY: (x - 0.5) * 12,
+        rotateX: (0.5 - y) * 9,
+        z: 18,
+        duration: 0.65,
+        ease: "power3.out",
+        overwrite: true,
+      });
+      rings.forEach((ring, index) => gsap.to(ring, {
+        x: (x - 0.5) * (index ? -12 : 12),
+        y: (y - 0.5) * (index ? -9 : 9),
+        duration: 0.8,
+        ease: "power3.out",
+        overwrite: true,
+      }));
+    });
+    scene.addEventListener("pointerleave", () => {
+      scene.style.setProperty("--pointer-x", "52%");
+      scene.style.setProperty("--pointer-y", "42%");
+      gsap.to([scene, core, ...rings], {
+        rotateX: 0,
+        rotateY: 0,
+        x: 0,
+        y: 0,
+        z: 0,
+        duration: 0.8,
+        ease: "elastic.out(1, 0.55)",
+        overwrite: true,
+      });
+    });
+  }
+} else if (!reduceMotion && "IntersectionObserver" in window) {
   const revealItems = [
     ...document.querySelectorAll(".section-heading"),
     ...document.querySelectorAll(".project-card"),
