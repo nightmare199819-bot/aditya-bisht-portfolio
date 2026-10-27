@@ -80,16 +80,37 @@ Promise.all([
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 if (!reduceMotion && "IntersectionObserver" in window) {
-  const revealItems = document.querySelectorAll(".section-heading, .project-card, .about-copy, .focus-card, .activity-panel, .contact-section .eyebrow, .contact-section h2, .contact-section .button");
-  revealItems.forEach((item) => item.classList.add("reveal"));
+  const revealItems = [
+    ...document.querySelectorAll(".section-heading"),
+    ...document.querySelectorAll(".project-card"),
+    ...document.querySelectorAll(".about-monogram, .about-copy, .focus-card, .activity-panel"),
+    ...document.querySelectorAll(".contact-section .eyebrow, .contact-section h2, .contact-section .button"),
+  ];
+  revealItems.forEach((item, index) => {
+    item.classList.add("reveal");
+    if (item.matches(".project-card")) {
+      item.dataset.reveal = "zoom";
+      const cardIndex = [...item.parentElement.children].indexOf(item);
+      item.style.transitionDelay = `${cardIndex * 130}ms`;
+    } else if (item.matches(".about-monogram, .activity-panel:nth-child(odd), .section-heading")) {
+      item.dataset.reveal = "from-left";
+    } else if (item.matches(".about-copy, .activity-panel:nth-child(even)")) {
+      item.dataset.reveal = "from-right";
+    } else {
+      item.dataset.reveal = "zoom";
+    }
+  });
   const observer = new IntersectionObserver((entries, activeObserver) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("is-visible");
+        entry.target.addEventListener("transitionend", () => {
+          entry.target.style.willChange = "auto";
+        }, { once: true });
         activeObserver.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.14, rootMargin: "0px 0px -35px 0px" });
+  }, { threshold: 0.16, rootMargin: "0px 0px -8% 0px" });
   revealItems.forEach((item) => observer.observe(item));
 }
 
