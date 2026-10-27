@@ -23,7 +23,27 @@ const formatDate = (value) => {
   return Number.isNaN(date.getTime()) ? "" : new Intl.DateTimeFormat(undefined, { dateStyle: "medium" }).format(date);
 };
 
+function renderAbout(about) {
+  if (!about) return;
+  const primary = $("#about-summary-primary");
+  const secondary = $("#about-summary-secondary");
+  if (primary && about.paragraphs?.[0]) primary.textContent = about.paragraphs[0];
+  if (secondary && about.paragraphs?.[1]) secondary.textContent = about.paragraphs[1];
+  const list = $("#linkedin-learning-areas");
+  if (list && Array.isArray(about.learningAreas)) {
+    list.replaceChildren(...about.learningAreas.map((area, index) => {
+      const item = document.createElement("li");
+      const number = document.createElement("span");
+      number.textContent = String(index + 1).padStart(2, "0");
+      item.append(number, document.createTextNode(area));
+      return item;
+    }));
+  }
+}
+
 function renderLinkedIn(data) {
+  if (!data) return;
+  renderAbout(data.about);
   if (!Array.isArray(data.posts) || data.posts.length === 0) return;
   const feed = $("#linkedin-feed");
   feed.replaceChildren(...data.posts.slice(0, 3).map((post) => {
