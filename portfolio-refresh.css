@@ -40,3 +40,16 @@ body{background:radial-gradient(ellipse at 83% 8%,rgba(181,160,255,.13),transpar
 .portrait-ring{transform-style:preserve-3d;will-change:transform}
 @media(max-width:680px){.portrait-card{perspective:none;will-change:auto}}
 @media(prefers-reduced-motion:reduce){.portrait-card,.portrait-core,.portrait-ring{transform:none!important;will-change:auto}}
+
+/* Make the 3D scene visibly alive without requiring hover or scroll. */
+.portrait-card{perspective:1000px;transform-style:preserve-3d}
+.portrait-ring{transform-style:preserve-3d;backface-visibility:hidden}
+.portrait-ring.ring-a{animation:orbit-a 14s linear infinite}
+.portrait-ring.ring-b{animation:orbit-b 19s linear infinite}
+.portrait-core{animation:core-float 3.4s ease-in-out infinite}
+.portrait-core i{animation:signal-pulse 2s ease-in-out infinite}
+@keyframes orbit-a{from{transform:rotateX(67deg) rotateZ(0deg)}to{transform:rotateX(67deg) rotateZ(360deg)}}
+@keyframes orbit-b{from{transform:rotateX(67deg) rotateY(30deg) rotateZ(360deg)}to{transform:rotateX(67deg) rotateY(30deg) rotateZ(0deg)}}
+@keyframes core-float{0%,100%{translate:0 0 12px}50%{translate:0 -12px 24px}}
+@keyframes signal-pulse{0%,100%{scale:1;box-shadow:0 0 16px rgba(181,160,255,.48)}50%{scale:1.32;box-shadow:0 0 28px rgba(181,160,255,.82)}}
+@media(prefers-reduced-motion:reduce){.portrait-ring,.portrait-core,.portrait-core i{animation:none!important}}
