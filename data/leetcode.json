@@ -1,2 +1,48 @@
-{"source":"manual","updatedAt":null,"profile":"aditya__bisht","stats":null,"recent":[]}
-
+{
+  "source": "live",
+  "updatedAt": "2026-10-27T09:51:52.464664+00:00",
+  "profile": "aditya__bisht",
+  "stats": {
+    "totalSolved": 29,
+    "easySolved": 26,
+    "mediumSolved": 3,
+    "hardSolved": 0
+  },
+  "recent": [
+    {
+      "title": "Pascal's Triangle",
+      "titleSlug": "pascals-triangle",
+      "date": "2026-10-26T20:24:13+00:00",
+      "url": "https://leetcode.com/problems/pascals-triangle",
+      "status": "Accepted"
+    },
+    {
+      "title": "Path Sum",
+      "titleSlug": "path-sum",
+      "date": "2026-10-26T18:16:05+00:00",
+      "url": "https://leetcode.com/problems/path-sum",
+      "status": "Accepted"
+    },
+    {
+      "title": "Minimum Depth of Binary Tree",
+      "titleSlug": "minimum-depth-of-binary-tree",
+      "date": "2026-10-25T17:11:33+00:00",
+      "url": "https://leetcode.com/problems/minimum-depth-of-binary-tree",
+      "status": "Accepted"
+    },
+    {
+      "title": "Balanced Binary Tree",
+      "titleSlug": "balanced-binary-tree",
+      "date": "2026-10-25T06:13:59+00:00",
+      "url": "https://leetcode.com/problems/balanced-binary-tree",
+      "status": "Accepted"
+    },
+    {
+      "title": "Convert Sorted Array to Binary Search Tree",
+      "titleSlug": "convert-sorted-array-to-binary-search-tree",
+      "date": "2026-10-24T16:47:11+00:00",
+      "url": "https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree",
+      "status": "Accepted"
+    }
+  ]
+}
