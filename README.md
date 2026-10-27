@@ -1,6 +1,6 @@
 # Aditya Bisht — Portfolio
 
-A responsive personal portfolio shaped around the profile and public posts shared on LinkedIn. It presents three project explorations: Aquire, Chain Chapter, and AgriNova. Voice Pay AI and the tomato UAV research paper are excluded. Descriptions reflect the available profile details; project labels stay neutral where completion status is unknown.
+A responsive personal portfolio shaped around the profile and public posts shared on LinkedIn. It presents four selected projects: Aquire, Chain Chapter, AgriNova, and DevTrack AI. DevTrack AI links to its live site. Voice Pay AI and the tomato UAV research paper are excluded. Descriptions reflect the available profile details; project labels stay neutral where completion status is unknown.
 
 ## Design
 
