@@ -3,7 +3,7 @@
   --navy:#080A09;--violet:#14251A;--gold:#00C878;--ivory:#F1F3ED;
   --slate:#171D18;--muted:#A7B0A6;--line:rgba(166,255,112,.16);
   --serif:"Blackadder ITC","Blackadder ITC Std","Great Vibes",cursive;
-  --sans:"Space Grotesk","DM Sans",Arial,sans-serif;
+  --sans:"Bell MT","Times New Roman",serif;
   --emerald:#00C878;--lime:#A6FF70;--crimson:#DC263D;--burgundy:#4A101B;
 }
 html{background:var(--navy)}
