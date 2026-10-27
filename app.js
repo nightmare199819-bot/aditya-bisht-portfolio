@@ -58,7 +58,7 @@ function renderLinkedIn(data) {
     try {
       const parsed = new URL(post.url || fallback);
       if (parsed.protocol === "https:" && (parsed.hostname === "www.linkedin.com" || parsed.hostname === "linkedin.com")) href = parsed.href;
-    } catch { /* Keep the safe profile fallback. */ }
+    } catch {}
     anchor.href = href;
     anchor.target = "_blank";
     anchor.rel = "noopener noreferrer";
