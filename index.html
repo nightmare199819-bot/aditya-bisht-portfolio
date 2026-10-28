@@ -3,16 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080A09">
-  <meta name="description" content="Aditya Bisht — B.Tech student focused on AI & Machine Learning, software development, and practical projects.">
-  <meta property="og:title" content="Aditya Bisht — Portfolio">
-  <meta property="og:description" content="A thoughtful selection of projects, learning, and problem-solving.">
-  <title>Aditya Bisht — Portfolio</title>
+  <meta name="theme-color" content="#080b12">
+  <meta name="description" content="Aditya Bisht is a B.Tech AIML student exploring AI, software development, and practical technology through hands-on projects.">
+  <meta property="og:title" content="Aditya Bisht — AI & Software Portfolio">
+  <meta property="og:description" content="Projects, experiments, and learning in AI and software development.">
+  <meta property="og:type" content="website">
+  <title>Aditya Bisht — AI & Software Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261027-emerald"><link rel="stylesheet" href="theme.css?v=20261027-bell-mt">
-  <script src="app.js?v=20261027-linkedin-about" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=20261027-refresh">
+  <link rel="stylesheet" href="theme.css?v=20261027-refresh">
+  <link rel="stylesheet" href="portfolio-refresh.css?v=20261027-editorial">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer crossorigin="anonymous"></script>
+  <script src="app.js?v=20261027-gsap-motion" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -21,56 +26,77 @@
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
       <a href="#work">Projects</a><a href="#about">About</a><a href="#activity">Learning</a>
-      <a class="nav-contact" href="https://www.linkedin.com/in/aditya-bisht-b3a12036b" target="_blank" rel="noreferrer">Connect <span aria-hidden="true">↗</span></a>
+      <a class="nav-contact" href="https://www.linkedin.com/in/aditya-bisht-b3a12036b" target="_blank" rel="noopener noreferrer">Let’s connect <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
+
   <main id="main">
     <section class="hero wrap" id="top">
       <div class="hero-copy">
-        <p class="eyebrow"><span></span> B.TECH · AI & MACHINE LEARNING</p>
-        <h1>Learning by<br><em>building things.</em></h1>
-        <p class="hero-intro">I’m Aditya Bisht, a student exploring AI, software development, and practical ways to solve real problems.</p>
-        <div class="hero-actions"><a class="button button-gold" href="#work">Explore selected work <span aria-hidden="true">↓</span></a><a class="inline-link" href="https://www.linkedin.com/in/aditya-bisht-b3a12036b" target="_blank" rel="noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a></div>
-        <div class="hero-foot"><span>BASED IN GHAZIABAD, INDIA</span><span class="tiny-divider"></span><span>CURIOUS ABOUT WHAT’S NEXT</span></div>
+        <p class="eyebrow"><span></span> B.TECH · ARTIFICIAL INTELLIGENCE & MACHINE LEARNING</p>
+        <h1>Curious by nature.<br><em>Builder by practice.</em></h1>
+        <p class="hero-intro">I’m a B.Tech AIML student at VIPS-TC exploring AI, software development, and practical ways to solve real problems. I learn by building, testing ideas, and improving one iteration at a time.</p>
+        <div class="hero-tags" aria-label="Areas of interest"><span>AI &amp; ML</span><span>Web development</span><span>Generative AI</span><span>Problem solving</span></div>
+        <div class="hero-actions"><a class="button button-gold" href="#work">Explore my work <span aria-hidden="true">↘</span></a><a class="inline-link" href="https://www.linkedin.com/in/aditya-bisht-b3a12036b" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-foot"><span>GHAZIABAD, INDIA</span><span class="tiny-divider"></span><span>LEARNING IN PUBLIC</span></div>
       </div>
-      <div class="portrait-card">
+      <div class="portrait-card" aria-label="Portrait of Aditya Bisht with animated 3D artwork">
+        <canvas id="hero-webgl" class="hero-webgl" aria-hidden="true"></canvas>
         <div class="portrait-noise" aria-hidden="true"></div>
         <div class="portrait-ring ring-a" aria-hidden="true"></div><div class="portrait-ring ring-b" aria-hidden="true"></div>
-        <img src="assets/profile-placeholder.svg" alt="AB monogram placeholder for Aditya Bisht’s profile photo">
-        <div class="portrait-label"><span>01</span><span>PROFILE IMAGE PLACEHOLDER</span></div>
+        <img class="portrait-photo" src="assets/aditya.jpeg" alt="Portrait of Aditya Bisht" width="320" height="400" fetchpriority="high">
+        <div class="portrait-label"><span>01</span><span>AI · SOFTWARE · IDEAS</span></div>
         <span class="corner corner-tl" aria-hidden="true"></span><span class="corner corner-br" aria-hidden="true"></span>
       </div>
       <span class="hero-index" aria-hidden="true">PORTFOLIO <i></i> 2026</span>
     </section>
 
     <section class="section wrap" id="work">
-      <div class="section-heading"><div><p class="eyebrow"><span></span> SELECTED PROJECTS</p><h2>Ideas I’ve explored<span class="gold">.</span></h2></div><p class="section-intro">A few directions where technology, people, and useful ideas meet.</p></div>
+      <div class="section-heading"><div><p class="eyebrow"><span></span> SELECTED WORK</p><h2>Ideas, made tangible<span class="gold">.</span></h2></div><p class="section-intro">A growing collection of projects and experiments across AI, useful software, and community-focused technology.</p></div>
       <div class="project-grid">
-        <article class="project-card project-aquire"><div class="project-meta"><span>01 / PROJECT</span><span class="project-state"><i></i> EXPLORATION</span></div><div class="project-visual visual-aquire" aria-hidden="true"><div class="aquire-orbit orbit-one"></div><div class="aquire-orbit orbit-two"></div><span class="aquire-letter">A<span>.</span></span><small>AQUIRE</small></div><div class="project-body"><h3><a href="https://www.aquire.in/" target="_blank" rel="noreferrer">Aquire <span class="project-arrow" aria-hidden="true">↗</span></a></h3><p>An AI-focused productivity and collaboration platform, exploring how intelligent tools can make focused work easier.</p><div class="chips"><span>AI</span><span>Productivity</span><span>Collaboration</span></div></div></article>
+        <article class="project-card project-aquire">
+          <div class="project-meta"><span>01 / PRODUCT CONCEPT</span><span class="project-state"><i></i> EXPLORATION</span></div>
+          <div class="project-visual visual-aquire" aria-hidden="true"><div class="aquire-orbit orbit-one"></div><div class="aquire-orbit orbit-two"></div><span class="aquire-letter">A<span>.</span></span><small>AQUIRE</small></div>
+          <div class="project-body"><h3><a href="https://www.aquire.in/" target="_blank" rel="noopener noreferrer">Aquire <span class="project-arrow" aria-hidden="true">↗</span></a></h3><p>An AI-focused productivity and collaboration platform exploring how intelligent tools can make focused work easier.</p><div class="chips"><span>AI</span><span>Productivity</span><span>Collaboration</span></div></div>
+        </article>
         <article class="project-card project-devtrack">
-          <div class="project-meta"><span>04 / PROJECT</span><span class="project-state"><i></i> LIVE SITE</span></div>
-          <a class="project-visual visual-devtrack" href="https://nightmare199819-bot.github.io/DevTrack-AI/" target="_blank" rel="noreferrer" aria-label="Open DevTrack AI live site">
-            <div class="devtrack-grid" aria-hidden="true"></div><div class="devtrack-mark" aria-hidden="true"><span></span><span></span><span></span></div><small>DEVTRACK AI ↗</small>
-          </a>
-          <div class="project-body"><h3><a href="https://nightmare199819-bot.github.io/DevTrack-AI/" target="_blank" rel="noreferrer">DevTrack AI <span class="project-arrow" aria-hidden="true">↗</span></a></h3><p>Explore the live DevTrack AI project.</p><div class="chips"><span>AI</span><span>Development</span><span>Live</span></div></div>
+          <div class="project-meta"><span>02 / WEB PROJECT</span><span class="project-state"><i></i> LIVE SITE</span></div>
+          <a class="project-visual visual-devtrack" href="https://nightmare199819-bot.github.io/DevTrack-AI/" target="_blank" rel="noopener noreferrer" aria-label="Open DevTrack AI live site"><div class="devtrack-grid" aria-hidden="true"></div><div class="devtrack-mark" aria-hidden="true"><span></span><span></span><span></span></div><small>DEVTRACK AI ↗</small></a>
+          <div class="project-body"><h3><a href="https://nightmare199819-bot.github.io/DevTrack-AI/" target="_blank" rel="noopener noreferrer">DevTrack AI <span class="project-arrow" aria-hidden="true">↗</span></a></h3><p>A project focused on making development progress and learning workflows easier to organise.</p><div class="chips"><span>Web development</span><span>AI</span><span>Productivity</span></div></div>
+        </article>
+        <article class="project-card project-chain">
+          <div class="project-meta"><span>03 / COMMUNITY CONCEPT</span><span class="project-state"><i></i> CONCEPT</span></div>
+          <div class="project-visual visual-chain" aria-hidden="true"><div class="chain-symbol"><b></b><b></b></div><small>CHAIN CHAPTER</small></div>
+          <div class="project-body"><h3>Chain Chapter</h3><p>A student-focused blockchain community concept for discovering events, learning resources, and peer connections.</p><div class="chips"><span>Community</span><span>Blockchain</span><span>Frontend</span></div></div>
+        </article>
+        <article class="project-card project-agri">
+          <div class="project-meta"><span>04 / HACKATHON PROTOTYPE</span><span class="project-state"><i></i> PROTOTYPE</span></div>
+          <div class="project-visual visual-agri" aria-hidden="true"><div class="sun"></div><div class="plant"></div><small>AGRINOVA</small></div>
+          <div class="project-body"><h3>AgriNova</h3><p>A farmer-to-buyer platform concept designed to make agricultural product discovery and direct selling more accessible.</p><div class="chips"><span>AgriTech</span><span>Marketplace</span><span>SIH 2025</span></div></div>
         </article>
       </div>
-      <p class="section-footnote">These are project explorations. The page will be updated as more confirmed details become available.</p>
+      <p class="section-footnote">Project labels reflect their current scope; concepts and prototypes are identified clearly rather than presented as finished products.</p>
     </section>
 
-    <section class="about-section" id="about"><div class="about-inner wrap"><div class="about-monogram" aria-hidden="true">AB<span>.</span></div><div class="about-copy"><p class="eyebrow"><span></span> A LITTLE ABOUT ME</p><h2>Strong fundamentals.<br><em>Practical curiosity.</em></h2><p id="about-summary-primary">I’m a B.Tech student specializing in Artificial Intelligence & Machine Learning at Vivekananda Institute of Professional Studies – Technical Campus. I’m building my skills through hands-on projects, workshops, and continuous learning.</p><p id="about-summary-secondary">My current learning areas include Python, AI and machine learning, web development, and generative AI. I’m especially interested in turning new concepts into practical solutions.</p><a class="inline-link" href="https://github.com/nightmare199819-bot/aditya-bisht-portfolio" target="_blank" rel="noreferrer">View this portfolio on GitHub <span aria-hidden="true">↗</span></a></div><aside class="focus-card"><p class="eyebrow">CURRENT CURIOSITIES</p><ul id="linkedin-learning-areas"><li><span>01</span> Artificial intelligence</li><li><span>02</span> Practical AI workflows</li><li><span>03</span> Computer networks</li><li><span>04</span> Building for real needs</li></ul></aside></div></section>
-
-    <section class="section wrap" id="activity">
-      <div class="section-heading"><div><p class="eyebrow"><span></span> LEARNING IN PUBLIC</p><h2>Notes from the journey<span class="gold">.</span></h2></div><p class="section-intro">Recent milestones and ongoing problem-solving practice.</p></div>
-      <div class="activity-grid">
-        <section class="activity-panel" aria-labelledby="linkedin-title"><div class="panel-heading"><div><span class="panel-kicker">SHARED ON LINKEDIN</span><h3 id="linkedin-title">Learning out loud</h3></div><a class="panel-link" href="https://www.linkedin.com/in/aditya-bisht-b3a12036b" target="_blank" rel="noreferrer" aria-label="Visit Aditya’s LinkedIn profile">↗</a></div><div id="linkedin-feed" class="feed-list"><p class="empty-state">Recent LinkedIn highlights will appear here.</p></div><p class="data-caption" id="linkedin-source">CURATED FROM MY LINKEDIN POSTS</p></section>
-        <section class="activity-panel" aria-labelledby="leetcode-title"><div class="panel-heading"><div><span class="panel-kicker">PROBLEM SOLVING</span><h3 id="leetcode-title">LeetCode practice</h3></div><a class="panel-link" href="https://leetcode.com/u/aditya__bisht/" target="_blank" rel="noreferrer" aria-label="Visit Aditya’s LeetCode profile">↗</a></div><div class="stats-grid"><div><strong id="total">—</strong><span>Problems solved</span></div><div><strong id="easy">—</strong><span>Easy</span></div><div><strong id="medium">—</strong><span>Medium</span></div><div><strong id="hard">—</strong><span>Hard</span></div></div><div id="leetcode-feed" class="feed-list"><p class="empty-state">Problem counts will appear after a successful refresh.</p></div><p class="data-caption" id="leetcode-source">SCHEDULED PUBLIC DATA REFRESH · ENABLE ACTIONS WRITES</p></section>
+    <section class="about-section" id="about">
+      <div class="about-inner wrap">
+        <div class="about-monogram" aria-hidden="true">AB<span>.</span></div>
+        <div class="about-copy"><p class="eyebrow"><span></span> A LITTLE ABOUT ME</p><h2>Strong fundamentals.<br><em>Practical curiosity.</em></h2><p id="about-summary-primary">I’m pursuing a B.Tech in Artificial Intelligence &amp; Machine Learning at Vivekananda Institute of Professional Studies – Technical Campus. I’m building my skills through hands-on projects, workshops, and continuous learning.</p><p id="about-summary-secondary">My current learning areas include Python, AI and machine learning, web development, and generative AI. I’m especially interested in turning new concepts into practical solutions.</p><a class="inline-link" href="https://github.com/nightmare199819-bot/aditya-bisht-portfolio" target="_blank" rel="noopener noreferrer">Explore the source on GitHub <span aria-hidden="true">↗</span></a></div>
+        <aside class="focus-card"><p class="eyebrow">CURRENT CURIOSITIES</p><ul id="linkedin-learning-areas"><li><span>01</span> Artificial intelligence</li><li><span>02</span> Practical AI workflows</li><li><span>03</span> Computer networks</li><li><span>04</span> Building for real needs</li></ul></aside>
       </div>
     </section>
 
-    <section class="contact-section"><div class="contact-orbit" aria-hidden="true"></div><p class="eyebrow"><span></span> OPEN TO LEARNING & COLLABORATION</p><h2>Have an idea worth<br><em>exploring together?</em></h2><a class="button button-gold" href="https://www.linkedin.com/in/aditya-bisht-b3a12036b" target="_blank" rel="noreferrer">Let’s connect <span aria-hidden="true">↗</span></a></section>
+    <section class="section wrap" id="activity">
+      <div class="section-heading"><div><p class="eyebrow"><span></span> LEARNING IN PUBLIC</p><h2>Progress over perfection<span class="gold">.</span></h2></div><p class="section-intro">Small milestones, consistent practice, and lessons collected along the way.</p></div>
+      <div class="activity-grid">
+        <section class="activity-panel" aria-labelledby="linkedin-title"><div class="panel-heading"><div><span class="panel-kicker">SHARED ON LINKEDIN</span><h3 id="linkedin-title">Learning out loud</h3></div><a class="panel-link" href="https://www.linkedin.com/in/aditya-bisht-b3a12036b" target="_blank" rel="noopener noreferrer" aria-label="Visit LinkedIn profile">↗</a></div><div id="linkedin-feed" class="feed-list"><p class="empty-state">Recent LinkedIn highlights will appear here.</p></div><p class="data-caption" id="linkedin-source">CURATED FROM LINKEDIN POSTS</p></section>
+        <section class="activity-panel" aria-labelledby="leetcode-title"><div class="panel-heading"><div><span class="panel-kicker">PROBLEM SOLVING</span><h3 id="leetcode-title">LeetCode practice</h3></div><a class="panel-link" href="https://leetcode.com/u/aditya__bisht/" target="_blank" rel="noopener noreferrer" aria-label="Visit LeetCode profile">↗</a></div><div class="stats-grid"><div><strong id="total">—</strong><span>Problems solved</span></div><div><strong id="easy">—</strong><span>Easy</span></div><div><strong id="medium">—</strong><span>Medium</span></div><div><strong id="hard">—</strong><span>Hard</span></div></div><div id="leetcode-feed" class="feed-list"><p class="empty-state">Problem counts will appear after a successful refresh.</p></div><p class="data-caption" id="leetcode-source">PUBLIC PROFILE DATA · LAST REFRESH</p></section>
+      </div>
+    </section>
+
+    <section class="contact-section"><div class="contact-orbit" aria-hidden="true"></div><p class="eyebrow"><span></span> OPEN TO LEARNING &amp; COLLABORATION</p><h2>Let’s build something<br><em>useful together.</em></h2><p class="contact-copy">Have a project idea, a learning opportunity, or a problem worth exploring? I’d be glad to connect.</p><a class="button button-gold" href="https://www.linkedin.com/in/aditya-bisht-b3a12036b" target="_blank" rel="noopener noreferrer">Say hello <span aria-hidden="true">↗</span></a></section>
   </main>
-  <footer class="site-footer wrap"><a class="brand" href="#top"><span class="monogram">AB</span><span>Aditya Bisht</span></a><p>Made with curiosity <span aria-hidden="true">✳</span> <span id="year"></span></p><nav aria-label="Social links"><a href="https://www.linkedin.com/in/aditya-bisht-b3a12036b" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/nightmare199819-bot/aditya-bisht-portfolio" target="_blank" rel="noreferrer">GitHub</a><a href="https://leetcode.com/u/aditya__bisht/" target="_blank" rel="noreferrer">LeetCode</a></nav></footer>
+  <footer class="site-footer wrap"><a class="brand" href="#top"><span class="monogram">AB</span><span>Aditya Bisht</span></a><p>Built with curiosity <span aria-hidden="true">✳</span> <span id="year"></span></p><nav aria-label="Social links"><a href="https://www.linkedin.com/in/aditya-bisht-b3a12036b" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/nightmare199819-bot/aditya-bisht-portfolio" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://leetcode.com/u/aditya__bisht/" target="_blank" rel="noopener noreferrer">LeetCode</a></nav></footer>
+  <script type="module" src="hero-scene.js?v=20261027-webgl"></script>
 </body>
 </html>
-
