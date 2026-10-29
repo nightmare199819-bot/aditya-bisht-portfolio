@@ -1,14 +1,21 @@
 {
   "source": "live",
-  "updatedAt": "2026-10-28T10:38:20.215852+00:00",
+  "updatedAt": "2026-10-29T10:55:45.455683+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 29,
-    "easySolved": 26,
+    "totalSolved": 30,
+    "easySolved": 27,
     "mediumSolved": 3,
     "hardSolved": 0
   },
   "recent": [
+    {
+      "title": "Pascal's Triangle II",
+      "titleSlug": "pascals-triangle-ii",
+      "date": "2026-10-28T17:32:53+00:00",
+      "url": "https://leetcode.com/problems/pascals-triangle-ii",
+      "status": "Accepted"
+    },
     {
       "title": "Pascal's Triangle",
       "titleSlug": "pascals-triangle",
@@ -35,13 +42,6 @@
       "titleSlug": "balanced-binary-tree",
       "date": "2026-10-25T06:13:59+00:00",
       "url": "https://leetcode.com/problems/balanced-binary-tree",
-      "status": "Accepted"
-    },
-    {
-      "title": "Convert Sorted Array to Binary Search Tree",
-      "titleSlug": "convert-sorted-array-to-binary-search-tree",
-      "date": "2026-10-24T16:47:11+00:00",
-      "url": "https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree",
       "status": "Accepted"
     }
   ]
