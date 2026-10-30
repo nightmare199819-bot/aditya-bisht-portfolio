@@ -1,14 +1,21 @@
 {
   "source": "live",
-  "updatedAt": "2026-10-29T10:55:45.455683+00:00",
+  "updatedAt": "2026-10-30T10:53:55.925083+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 30,
-    "easySolved": 27,
+    "totalSolved": 31,
+    "easySolved": 28,
     "mediumSolved": 3,
     "hardSolved": 0
   },
   "recent": [
+    {
+      "title": "Best Time to Buy and Sell Stock",
+      "titleSlug": "best-time-to-buy-and-sell-stock",
+      "date": "2026-10-29T17:28:59+00:00",
+      "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock",
+      "status": "Accepted"
+    },
     {
       "title": "Pascal's Triangle II",
       "titleSlug": "pascals-triangle-ii",
@@ -35,13 +42,6 @@
       "titleSlug": "minimum-depth-of-binary-tree",
       "date": "2026-10-25T17:11:33+00:00",
       "url": "https://leetcode.com/problems/minimum-depth-of-binary-tree",
-      "status": "Accepted"
-    },
-    {
-      "title": "Balanced Binary Tree",
-      "titleSlug": "balanced-binary-tree",
-      "date": "2026-10-25T06:13:59+00:00",
-      "url": "https://leetcode.com/problems/balanced-binary-tree",
       "status": "Accepted"
     }
   ]
