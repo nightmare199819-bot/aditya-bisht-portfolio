@@ -1,14 +1,28 @@
 {
   "source": "live",
-  "updatedAt": "2026-10-30T10:53:55.925083+00:00",
+  "updatedAt": "2026-10-31T10:25:44.319105+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 31,
-    "easySolved": 28,
-    "mediumSolved": 3,
+    "totalSolved": 33,
+    "easySolved": 29,
+    "mediumSolved": 4,
     "hardSolved": 0
   },
   "recent": [
+    {
+      "title": "Longest Substring Without Repeating Characters",
+      "titleSlug": "longest-substring-without-repeating-characters",
+      "date": "2026-10-30T17:36:33+00:00",
+      "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters",
+      "status": "Accepted"
+    },
+    {
+      "title": "Valid Palindrome",
+      "titleSlug": "valid-palindrome",
+      "date": "2026-10-30T17:33:59+00:00",
+      "url": "https://leetcode.com/problems/valid-palindrome",
+      "status": "Accepted"
+    },
     {
       "title": "Best Time to Buy and Sell Stock",
       "titleSlug": "best-time-to-buy-and-sell-stock",
@@ -28,20 +42,6 @@
       "titleSlug": "pascals-triangle",
       "date": "2026-10-26T20:24:13+00:00",
       "url": "https://leetcode.com/problems/pascals-triangle",
-      "status": "Accepted"
-    },
-    {
-      "title": "Path Sum",
-      "titleSlug": "path-sum",
-      "date": "2026-10-26T18:16:05+00:00",
-      "url": "https://leetcode.com/problems/path-sum",
-      "status": "Accepted"
-    },
-    {
-      "title": "Minimum Depth of Binary Tree",
-      "titleSlug": "minimum-depth-of-binary-tree",
-      "date": "2026-10-25T17:11:33+00:00",
-      "url": "https://leetcode.com/problems/minimum-depth-of-binary-tree",
       "status": "Accepted"
     }
   ]
