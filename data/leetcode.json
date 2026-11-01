@@ -1,14 +1,28 @@
 {
   "source": "live",
-  "updatedAt": "2026-10-31T10:25:44.319105+00:00",
+  "updatedAt": "2026-11-01T11:19:32.178653+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 33,
-    "easySolved": 29,
+    "totalSolved": 35,
+    "easySolved": 31,
     "mediumSolved": 4,
     "hardSolved": 0
   },
   "recent": [
+    {
+      "title": "Linked List Cycle",
+      "titleSlug": "linked-list-cycle",
+      "date": "2026-10-31T17:57:00+00:00",
+      "url": "https://leetcode.com/problems/linked-list-cycle",
+      "status": "Accepted"
+    },
+    {
+      "title": "Single Number",
+      "titleSlug": "single-number",
+      "date": "2026-10-31T17:54:52+00:00",
+      "url": "https://leetcode.com/problems/single-number",
+      "status": "Accepted"
+    },
     {
       "title": "Longest Substring Without Repeating Characters",
       "titleSlug": "longest-substring-without-repeating-characters",
@@ -28,20 +42,6 @@
       "titleSlug": "best-time-to-buy-and-sell-stock",
       "date": "2026-10-29T17:28:59+00:00",
       "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock",
-      "status": "Accepted"
-    },
-    {
-      "title": "Pascal's Triangle II",
-      "titleSlug": "pascals-triangle-ii",
-      "date": "2026-10-28T17:32:53+00:00",
-      "url": "https://leetcode.com/problems/pascals-triangle-ii",
-      "status": "Accepted"
-    },
-    {
-      "title": "Pascal's Triangle",
-      "titleSlug": "pascals-triangle",
-      "date": "2026-10-26T20:24:13+00:00",
-      "url": "https://leetcode.com/problems/pascals-triangle",
       "status": "Accepted"
     }
   ]
