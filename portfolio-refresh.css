@@ -1,0 +1,72 @@
+/* Editorial layout upgrade: clearer hierarchy and a more distinctive project showcase. */
+:root{--canvas:#080b12;--panel:#111827;--panel-raised:#151f31;--stroke:rgba(214,229,255,.13);--mint:#aefc78;--violet:#b5a0ff;--copy:#b9c4d4}
+body{background:radial-gradient(ellipse at 83% 8%,rgba(181,160,255,.13),transparent 34rem),radial-gradient(ellipse at 5% 27%,rgba(115,245,166,.10),transparent 30rem),var(--canvas)}
+.site-header{border-bottom-color:var(--stroke);background:rgba(8,11,18,.78)}
+.hero{min-height:700px;padding-top:88px;padding-bottom:108px;grid-template-columns:minmax(0,1.1fr) minmax(320px,.9fr);gap:clamp(42px,7vw,100px)}
+.hero-copy{max-width:700px}
+.hero h1{font-size:clamp(58px,7.8vw,98px);letter-spacing:-.075em;line-height:.99}
+.hero h1 em{color:var(--mint);font-size:.82em;letter-spacing:-.08em}
+.hero-intro{max-width:505px;color:var(--copy);font-size:17px;line-height:1.8}
+.hero-tags span{padding:7px 12px;background:rgba(181,160,255,.07);border-color:rgba(181,160,255,.19);color:#d9d0ff}
+.portrait-card{height:470px;border-radius:28px;border-color:rgba(181,160,255,.32);background:radial-gradient(ellipse at 52% 42%,rgba(181,160,255,.18),transparent 47%),radial-gradient(ellipse at 18% 90%,rgba(115,245,166,.12),transparent 44%),linear-gradient(145deg,#172137,#0b101b 72%);box-shadow:0 32px 95px rgba(0,0,0,.34),inset 0 1px rgba(255,255,255,.07)}
+.portrait-core{width:218px;height:218px;border-color:rgba(174,252,120,.48);background:radial-gradient(circle at 32% 25%,rgba(174,252,120,.18),rgba(14,22,34,.92) 68%);box-shadow:0 0 85px rgba(181,160,255,.14),inset 0 0 45px rgba(115,245,166,.08)}
+.portrait-core span{font-size:84px;color:#e4ffd1}
+.section{padding-top:112px;padding-bottom:116px}
+.section-heading{margin-bottom:42px}
+.section-heading h2,.about-copy h2,.contact-section h2{letter-spacing:-.07em}
+.project-grid{grid-template-columns:repeat(12,minmax(0,1fr));gap:20px}
+.project-card{grid-column:span 6;padding:16px;border-radius:20px;background:linear-gradient(150deg,rgba(22,32,49,.96),rgba(12,17,28,.98));border-color:var(--stroke);box-shadow:0 18px 48px rgba(0,0,0,.15)}
+.project-card:nth-child(1),.project-card:nth-child(4){grid-column:span 7}
+.project-card:nth-child(2),.project-card:nth-child(3){grid-column:span 5}
+.project-card:hover{transform:translateY(-6px);border-color:rgba(174,252,120,.48);box-shadow:0 25px 60px rgba(0,0,0,.3),0 0 35px rgba(181,160,255,.08)}
+.project-visual{height:clamp(190px,22vw,260px);border-radius:13px}
+.project-body{padding:21px 7px 9px}
+.project-body h3{font-size:28px}
+.project-body p{min-height:unset;max-width:52ch;font-size:13px;line-height:1.75;color:var(--copy)}
+.chips span{background:rgba(181,160,255,.07);border-color:rgba(181,160,255,.2);color:#d6ceff}
+.about-section{background:linear-gradient(105deg,rgba(21,31,49,.9),rgba(12,17,28,.65) 62%,rgba(47,38,78,.32));border-color:var(--stroke)}
+.focus-card,.activity-panel{border-radius:18px;background:linear-gradient(145deg,rgba(21,31,49,.92),rgba(12,17,28,.96));border-color:var(--stroke)}
+.contact-section{padding-top:110px;padding-bottom:120px;background:radial-gradient(ellipse at 50% 38%,rgba(181,160,255,.16),transparent 42%),radial-gradient(ellipse at 54% 58%,rgba(115,245,166,.1),transparent 40%)}
+.contact-section h2 em{color:var(--mint)}
+.button-gold{background:var(--mint);box-shadow:0 10px 28px rgba(174,252,120,.18)}
+.button-gold:hover{background:#d7ffbd;box-shadow:0 14px 36px rgba(174,252,120,.24)}
+@media(max-width:900px){.hero{min-height:unset;gap:40px;padding-top:70px;padding-bottom:90px}.portrait-card{height:390px}.project-card:nth-child(n){grid-column:span 6}.project-visual{height:200px}}
+@media(max-width:680px){.hero{padding-top:54px;padding-bottom:75px;gap:35px}.hero h1{font-size:clamp(52px,14vw,74px)}.hero-intro{font-size:15px}.portrait-card{width:min(100%,430px);height:350px;justify-self:center}.portrait-core{width:180px;height:180px}.portrait-core span{font-size:70px}.section{padding-top:78px;padding-bottom:82px}.section-heading{align-items:flex-start;flex-direction:column;gap:12px}.project-grid{grid-template-columns:minmax(0,1fr);gap:15px}.project-card:nth-child(n){grid-column:1}.project-visual{height:205px}.about-inner{padding-top:62px;padding-bottom:62px}.contact-section{padding:76px 22px 84px}}
+@media(prefers-reduced-motion:reduce){.project-card:hover{transform:none}}
+
+/* Pointer-lit dimensional hero inspired by ThreeUI's authored WebGL scenes. */
+.portrait-card{perspective:1100px;transform-style:preserve-3d;will-change:transform;background:radial-gradient(ellipse at var(--pointer-x,52%) var(--pointer-y,42%),rgba(181,160,255,.23),transparent 38%),radial-gradient(ellipse at 18% 90%,rgba(115,245,166,.12),transparent 44%),linear-gradient(145deg,#172137,#0b101b 72%)}
+.portrait-core{transform-style:preserve-3d;will-change:transform}
+.portrait-ring{transform-style:preserve-3d;will-change:transform}
+@media(max-width:680px){.portrait-card{perspective:none;will-change:auto}}
+@media(prefers-reduced-motion:reduce){.portrait-card,.portrait-core,.portrait-ring{transform:none!important;will-change:auto}}
+
+/* Make the 3D scene visibly alive without requiring hover or scroll. */
+.portrait-card{perspective:1000px;transform-style:preserve-3d}
+.portrait-ring{transform-style:preserve-3d;backface-visibility:hidden}
+.portrait-ring.ring-a{animation:orbit-a 14s linear infinite}
+.portrait-ring.ring-b{animation:orbit-b 19s linear infinite}
+.portrait-core{animation:core-float 3.4s ease-in-out infinite}
+.portrait-core i{animation:signal-pulse 2s ease-in-out infinite}
+@keyframes orbit-a{from{transform:rotateX(67deg) rotateZ(0deg)}to{transform:rotateX(67deg) rotateZ(360deg)}}
+@keyframes orbit-b{from{transform:rotateX(67deg) rotateY(30deg) rotateZ(360deg)}to{transform:rotateX(67deg) rotateY(30deg) rotateZ(0deg)}}
+@keyframes core-float{0%,100%{translate:0 0 12px}50%{translate:0 -12px 24px}}
+@keyframes signal-pulse{0%,100%{scale:1;box-shadow:0 0 16px rgba(181,160,255,.48)}50%{scale:1.32;box-shadow:0 0 28px rgba(181,160,255,.82)}}
+@media(prefers-reduced-motion:reduce){.portrait-ring,.portrait-core,.portrait-core i{animation:none!important}}
+
+/* WebGL canvas sits behind the live monogram text; CSS artwork remains the fallback. */
+.hero-webgl{position:absolute;inset:0;z-index:1;width:100%;height:100%;display:block;opacity:0;pointer-events:none;transition:opacity .5s ease}
+.portrait-card.webgl-ready .hero-webgl{opacity:1}
+.portrait-card.webgl-ready .portrait-noise{opacity:.035}
+.portrait-card.webgl-ready .portrait-ring{opacity:0;animation:none}
+.portrait-card.webgl-ready .portrait-core{z-index:2;width:auto;height:auto;border:0;background:none;box-shadow:none;animation:none}
+.portrait-card.webgl-ready .portrait-core span{color:#e6ffd8;font-size:clamp(48px,6vw,70px);text-shadow:0 0 24px rgba(174,252,120,.42),0 0 56px rgba(181,160,255,.32)}
+.portrait-card.webgl-ready .portrait-core i{display:none}
+.portrait-card .portrait-label,.portrait-card .corner{z-index:3}
+@media(prefers-reduced-motion:reduce){.hero-webgl{transition:none}}
+
+/* Use the supplied portrait as the focal point while keeping the orbital scene visible. */
+.portrait-photo{position:relative;z-index:2;display:block;width:min(72%,300px);height:78%;object-fit:cover;object-position:48% 26%;border:1px solid rgba(226,237,255,.38);border-radius:46% 46% 22px 22px;box-shadow:0 24px 65px rgba(0,0,0,.4),0 0 42px rgba(181,160,255,.15);transform:translateZ(34px);animation:portrait-float 4.2s ease-in-out infinite}
+@keyframes portrait-float{0%,100%{translate:0 0 0}50%{translate:0 -8px 0}}
+@media(max-width:680px){.portrait-photo{height:78%;width:min(76%,300px);object-position:48% 25%}}
+@media(prefers-reduced-motion:reduce){.portrait-photo{animation:none}}
