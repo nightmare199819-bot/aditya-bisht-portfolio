@@ -1,47 +1,47 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-02T12:31:07.038856+00:00",
+  "updatedAt": "2026-11-03T11:59:17.426012+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 37,
+    "totalSolved": 44,
     "easySolved": 33,
-    "mediumSolved": 4,
+    "mediumSolved": 11,
     "hardSolved": 0
   },
   "recent": [
     {
-      "title": "Binary Tree Postorder Traversal",
-      "titleSlug": "binary-tree-postorder-traversal",
-      "date": "2026-11-01T15:41:58+00:00",
-      "url": "https://leetcode.com/problems/binary-tree-postorder-traversal",
+      "title": "3Sum Closest",
+      "titleSlug": "3sum-closest",
+      "date": "2026-11-02T18:04:34+00:00",
+      "url": "https://leetcode.com/problems/3sum-closest",
       "status": "Accepted"
     },
     {
-      "title": "Binary Tree Preorder Traversal",
-      "titleSlug": "binary-tree-preorder-traversal",
-      "date": "2026-11-01T15:41:07+00:00",
-      "url": "https://leetcode.com/problems/binary-tree-preorder-traversal",
+      "title": "3Sum",
+      "titleSlug": "3sum",
+      "date": "2026-11-02T18:04:04+00:00",
+      "url": "https://leetcode.com/problems/3sum",
       "status": "Accepted"
     },
     {
-      "title": "Linked List Cycle",
-      "titleSlug": "linked-list-cycle",
-      "date": "2026-10-31T17:57:00+00:00",
-      "url": "https://leetcode.com/problems/linked-list-cycle",
+      "title": "Integer to Roman",
+      "titleSlug": "integer-to-roman",
+      "date": "2026-11-02T18:02:21+00:00",
+      "url": "https://leetcode.com/problems/integer-to-roman",
       "status": "Accepted"
     },
     {
-      "title": "Single Number",
-      "titleSlug": "single-number",
-      "date": "2026-10-31T17:54:52+00:00",
-      "url": "https://leetcode.com/problems/single-number",
+      "title": "String to Integer (atoi)",
+      "titleSlug": "string-to-integer-atoi",
+      "date": "2026-11-02T17:58:13+00:00",
+      "url": "https://leetcode.com/problems/string-to-integer-atoi",
       "status": "Accepted"
     },
     {
-      "title": "Longest Substring Without Repeating Characters",
-      "titleSlug": "longest-substring-without-repeating-characters",
-      "date": "2026-10-30T17:36:33+00:00",
-      "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters",
+      "title": "Zigzag Conversion",
+      "titleSlug": "zigzag-conversion",
+      "date": "2026-11-02T17:57:56+00:00",
+      "url": "https://leetcode.com/problems/zigzag-conversion",
       "status": "Accepted"
     }
   ]
