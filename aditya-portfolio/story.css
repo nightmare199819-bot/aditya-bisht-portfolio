@@ -26,3 +26,4 @@
 .story-fly{position:fixed;z-index:30;left:0;top:0;margin:0;overflow:hidden;pointer-events:none;display:none;will-change:transform,width,height}
 .story-fly img{width:100%;height:100%;object-fit:cover;object-position:50% 0;display:block}
 .story.fly .story-panel{visibility:hidden}
+@media (max-width:760px){.js-hero .story,.story-fly{display:none!important}}

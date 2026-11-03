@@ -9,9 +9,11 @@
     const flies = targets.map((t, i) => { const f = document.createElement("figure"); f.className = "story-fly"; f.style.zIndex = 30 + i; const im = new Image(); im.alt = ""; im.src = panels[i] ? panels[i].querySelector("img").src : ""; f.append(im); document.body.append(f); return f; });
     return { el, panels, targets, flies, count: el.querySelector(".story-count"), tag: el.querySelector(".story-tag") };
   });
+  const narrow = matchMedia("(max-width: 760px)");
   let ticking = false;
   const update = () => {
     ticking = false;
+    if (narrow.matches) return;
     stories.forEach(({ el, panels, count, targets, flies }) => {
       const r = el.getBoundingClientRect();
       const vh = innerHeight, vw = innerWidth, A = r.bottom;
