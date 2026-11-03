@@ -186,9 +186,11 @@ function renderLeetCode(data) {
   $("#leetcode-source").textContent = `${data.source === "live" ? "PUBLIC PROFILE · UPDATED" : "MANUAL DATA · UPDATED"} ${updated}`;
 }
 
+// Data lives in ./data (local) or ../data (when the site sits in the aditya-portfolio/ folder on GitHub Pages)
+const fetchData = (name) => fetch("data/" + name).then((r) => r.ok ? r.json() : Promise.reject()).catch(() => fetch("../data/" + name).then((r) => r.ok ? r.json() : null)).catch(() => null);
 Promise.all([
-  fetch("data/linkedin.json").then((response) => response.ok ? response.json() : null).catch(() => null),
-  fetch("data/leetcode.json").then((response) => response.ok ? response.json() : null).catch(() => null),
+  fetchData("linkedin.json"),
+  fetchData("leetcode.json"),
 ]).then(([linkedin, leetcode]) => {
   if (linkedin) renderLinkedIn(linkedin);
   if (leetcode) renderLeetCode(leetcode);
