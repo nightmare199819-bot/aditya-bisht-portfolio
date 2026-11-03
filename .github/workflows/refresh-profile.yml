@@ -2,7 +2,7 @@ name: Refresh public LeetCode data
 
 on:
   schedule:
-    - cron: "23 4 * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 permissions:
