@@ -1,0 +1,20 @@
+/* gold.css — emerald + warm gold variant. Crimson is retired; gold carries the small details. Loads after hero.css. */
+:root{--warm:#E2C57E;--crimson:#E2C57E}
+
+/* Gold for labels and small marks; emerald/mint stay for actions and headings */
+.eyebrow{color:var(--warm)}
+.gold,.project-arrow{color:var(--warm)}
+.corner{border-color:var(--warm)}
+.portrait-label span:first-child{color:var(--warm)}
+.focus-card li span{color:var(--warm)}
+.hero-index i,.tiny-divider{background:var(--warm)}
+.about-monogram span{color:var(--warm)}
+.nav-contact{border-color:rgba(226,197,126,.55);color:var(--warm)}
+.nav-contact:hover{background:rgba(226,197,126,.1)}
+
+/* Remove the last maroon tints so no red remains */
+body{background:radial-gradient(ellipse at 76% 9%,rgba(0,200,120,.09),transparent 35rem),radial-gradient(ellipse at 17% 29%,rgba(226,197,126,.045),transparent 28rem),var(--navy)}
+.about-section{background:linear-gradient(115deg,rgba(20,37,26,.78),rgba(8,10,9,.98) 62%,rgba(40,32,16,.3))}
+.visual-aquire,.visual-devtrack{background:radial-gradient(ellipse at 40% 40%,rgba(0,200,120,.16),transparent 48%),linear-gradient(135deg,#111A13,#0A0B09 65%,#1C1810)}
+.portrait-card{background:transparent}
+.aquire-letter{text-shadow:0 0 28px rgba(0,200,120,.3)}

@@ -1,0 +1,66 @@
+/* polish.css — UI/UX refinement layer. Loads after theme.css; keeps the emerald/crimson art direction. */
+:root{--ui:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;--ease:cubic-bezier(.16,1,.3,1)}
+
+/* 1. Readability: serif stays for headings/prose; small labels use the sans UI font at >=12px */
+.site-nav,.nav-contact,.button,.inline-link,.eyebrow,.project-meta,.project-state,.chips span,.panel-kicker,.data-caption,.hero-foot,.hero-index,.portrait-label,.stats-grid span,.feed-meta,.feed-item time,.bar-legend,.site-footer nav,.site-footer p,.skip-link,.project-visual small,.empty-state{font-family:var(--ui)}
+.data-caption,.hero-index,.portrait-label,.project-state,.hero-foot,.project-meta,.panel-kicker,.project-visual small{font-size:12px}
+.eyebrow{font-size:13px}
+.chips span,.feed-item time,.feed-meta,.bar-legend,.stats-grid span{font-size:13px}
+h1,h2{text-wrap:balance}
+p{text-wrap:pretty}
+.feed-item a{text-underline-offset:4px}
+.feed-item a:hover{text-decoration:underline}
+
+/* 2. Header: scroll state, active link, progress */
+.site-header{transition:background .3s ease,box-shadow .3s ease,border-color .3s ease}
+.site-header.is-scrolled{background:rgba(8,10,9,.97);box-shadow:0 10px 34px rgba(0,0,0,.4)}
+.scroll-progress{position:fixed;inset:0 0 auto 0;height:3px;z-index:30;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--emerald),var(--lime),var(--crimson));pointer-events:none}
+.site-nav a:not(.nav-contact){position:relative;padding:6px 0}
+.site-nav a:not(.nav-contact)::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:linear-gradient(90deg,var(--emerald),var(--crimson));transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.site-nav a[aria-current="true"],.site-nav a:not(.nav-contact):hover{color:var(--lime)}
+.site-nav a[aria-current="true"]::after,.site-nav a:not(.nav-contact):hover::after{transform:scaleX(1)}
+.nav-contact,.panel-link,.menu-toggle{min-height:44px}
+.panel-link{min-width:44px}
+.site-footer nav a{padding:10px 4px}
+.menu-toggle span{background:var(--lime)}
+.menu-toggle{border-color:rgba(0,200,120,.4)}
+
+/* 3. Mobile menu was still on the old navy palette */
+@media(max-width:680px){
+ .site-nav{background:rgba(8,10,9,.98);border-bottom:1px solid rgba(0,200,120,.3);box-shadow:0 18px 40px rgba(0,0,0,.45)}
+ .site-nav a:not(.nav-contact){padding:12px 0;font-size:18px}
+}
+
+/* 4. Back to top */
+.to-top{position:fixed;right:20px;bottom:20px;z-index:25;width:46px;height:46px;border:1px solid rgba(0,200,120,.5);background:rgba(8,10,9,.88);color:var(--lime);font:20px/1 var(--ui);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .3s ease,transform .3s var(--ease),visibility .3s,background .2s ease,box-shadow .2s ease;backdrop-filter:blur(10px)}
+.to-top.is-shown{opacity:1;visibility:visible;transform:none}
+.to-top:hover{background:var(--emerald);color:#06130C;box-shadow:4px 4px 0 rgba(220,38,61,.3)}
+
+/* 5. Leftover gold/purple from the old palette -> emerald */
+.hero:before{background:radial-gradient(ellipse at 70% 40%,rgba(0,200,120,.13),transparent 57%)}
+.portrait-card:after{background:conic-gradient(from 45deg,transparent 0 30%,rgba(0,200,120,.12) 40%,transparent 55% 100%)}
+.corner{border-color:var(--emerald)}
+.hero-index i,.tiny-divider{background:var(--emerald)}
+.portrait-label span:first-child{color:var(--lime)}
+.aquire-orbit{border-color:rgba(0,200,120,.42)}
+.devtrack-grid{background-image:linear-gradient(rgba(0,200,120,.2) 1px,transparent 1px),linear-gradient(90deg,rgba(0,200,120,.2) 1px,transparent 1px)}
+.devtrack-mark{border-color:rgba(0,200,120,.64)}
+.devtrack-mark span{background:var(--lime)}
+.visual-devtrack:after{background:radial-gradient(circle at 50% 48%,rgba(0,200,120,.14),transparent 36%)}
+
+/* 6. Project cards: equal height, chips pinned to bottom, whole card clickable */
+.project-grid{align-items:stretch}
+.project-card{display:flex;flex-direction:column;cursor:pointer}
+.project-body{flex:1;display:flex;flex-direction:column}
+.project-body p{min-height:0}
+.project-body .chips{margin-top:auto;padding-top:18px}
+
+/* 7. Loading state for feeds */
+.empty-state{display:flex;align-items:center;gap:10px}
+.empty-state::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--emerald);animation:pulse-dot 1.6s ease-in-out infinite}
+@keyframes pulse-dot{0%,100%{opacity:.35;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}
+
+/* 8. No sticky hover on touch screens */
+@media(hover:none){.project-card:hover,.skill-category:hover,.project-card.reveal.is-visible:hover,.chips span:hover{transform:none}}
+
+@media(prefers-reduced-motion:reduce){.scroll-progress{display:none}.to-top{transition:none}.empty-state::before{animation:none}}

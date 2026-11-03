@@ -1,0 +1,91 @@
+/* pro.css — professional type system, project screenshot frames, About photo. Loads last. */
+:root{
+  --display:"Fraunces","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --ui:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --serif:var(--display);--sans:var(--ui);
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+html{font-optical-sizing:auto}
+body{font-family:var(--ui);font-size:16px;line-height:1.65;letter-spacing:-.003em;text-rendering:optimizeLegibility}
+
+/* ---------- Type scale: display serif for headings, Inter for reading, mono for labels ---------- */
+h1,h2,h3,.hero h1,.about-copy h2,.contact-section h2,.section-heading h2,.project-body h3,.panel-heading h3,.skill-category h3{font-family:var(--display);font-weight:500;letter-spacing:-.022em}
+.hero h1{font-size:clamp(2.7rem,6vw,5.6rem);line-height:1.04;margin:22px 0;text-shadow:none}
+.hero h1 em,.about-copy h2 em,.contact-section h2 em{font-style:italic;font-weight:400;background:none;-webkit-text-fill-color:currentColor;color:var(--lime);animation:none;text-shadow:none;letter-spacing:-.018em}
+.hero h1 em{display:block;font-size:.92em;line-height:1.08;white-space:nowrap}
+.section-heading h2,.about-copy h2,.contact-section h2{font-size:clamp(2rem,4.2vw,3.5rem);line-height:1.1}
+.project-body h3{font-size:clamp(1.5rem,2.2vw,1.85rem);line-height:1.2}
+.panel-heading h3{font-size:1.55rem}
+.skill-category h3{font-size:1.25rem}
+.hero-name{font-family:var(--display);font-weight:400;font-size:clamp(3.2rem,9.5vw,8.4rem);letter-spacing:-.03em;line-height:.98}
+
+.eyebrow,.project-meta,.project-state,.panel-kicker,.data-caption,.hero-foot,.hero-index,.portrait-label,.hero-scroll{font-family:var(--mono);font-weight:500;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase}
+.eyebrow{font-size:12px}
+.feed-meta,.feed-item time,.bar-legend{font-family:var(--mono);font-size:12px;letter-spacing:.02em}
+.stats-grid strong{font-family:var(--mono);font-weight:500;font-variant-numeric:tabular-nums;letter-spacing:-.02em;font-size:2rem}
+.stats-grid span{font-family:var(--ui);font-size:12.5px}
+.chips span,.skill-category .chips span{font-family:var(--ui);font-size:12.5px;font-weight:500;letter-spacing:.005em}
+
+.site-nav{font-family:var(--ui);font-size:14px;font-weight:500;letter-spacing:.005em}
+.brand{font-family:var(--ui);font-weight:600;font-size:15px;letter-spacing:-.01em}
+.monogram{font-family:var(--display);font-size:17px;font-weight:500;letter-spacing:-.02em}
+.button,.inline-link,.nav-contact{font-family:var(--ui);font-weight:600;font-size:14.5px;letter-spacing:0}
+
+.hero-intro,.section-intro,.project-body p,.about-copy>p:not(.eyebrow),.focus-card li,.skill-category-desc,.feed-item a,.empty-state{font-family:var(--ui)}
+.hero-intro{font-size:clamp(1.02rem,1.35vw,1.18rem);line-height:1.7;color:#C9D0C8;max-width:46ch}
+.section-intro{font-size:15.5px;line-height:1.7;max-width:36ch}
+.project-body p{font-size:15px;line-height:1.65;min-height:0}
+.about-copy>p:not(.eyebrow){font-size:16.5px;line-height:1.75;max-width:60ch}
+.focus-card li{font-size:15px}
+.skill-category-desc{font-size:14.5px}
+.feed-item a{font-size:15px}
+
+@media(max-width:680px){
+  .hero h1{font-size:clamp(2.5rem,11vw,3.4rem)}
+  .hero h1 em{white-space:normal}
+  .section-heading h2,.about-copy h2,.contact-section h2{font-size:clamp(1.9rem,8vw,2.5rem)}
+}
+
+/* ---------- Headline word-mask reveal ---------- */
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.14em;margin-bottom:-.14em}
+.split .wi{display:inline-block;transform:translateY(108%);transition:transform .9s var(--ease) calc(var(--i,0) * 70ms)}
+.split.in .wi{transform:none}
+
+/* ---------- Project screenshot frames ---------- */
+.project-card{padding:14px}
+.project-card .project-meta{height:auto;padding:2px 4px 14px}
+.project-shot{display:block;position:relative;border:1px solid rgba(125,245,196,.2);border-radius:10px;overflow:hidden;background:#0B0F0D;box-shadow:0 18px 50px rgba(0,0,0,.4);transform:perspective(1000px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .25s ease-out,box-shadow .4s ease,border-color .3s ease;will-change:transform}
+.project-card:hover .project-shot{border-color:rgba(125,245,196,.5);box-shadow:0 26px 60px rgba(0,0,0,.5),0 0 40px rgba(0,200,120,.12)}
+.shot-bar{display:flex;align-items:center;gap:6px;height:34px;padding:0 12px;background:#0F1512;border-bottom:1px solid rgba(125,245,196,.12)}
+.shot-bar i{width:9px;height:9px;border-radius:50%;background:rgba(241,243,237,.2)}
+.shot-bar em{flex:1;margin:0 44px 0 10px;text-align:center;font:500 11px var(--mono);font-style:normal;color:#9FB0A6;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.shot-view{display:block;position:relative;aspect-ratio:16/10;overflow:hidden;background:#0A0F0C}
+.shot-view img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0%;color:transparent;transition:object-position 7s cubic-bezier(.35,.1,.25,1)}
+.project-card:hover .shot-view img,.project-shot:focus-visible .shot-view img{object-position:50% 100%}
+.shot-visit{position:absolute;right:12px;bottom:12px;z-index:2;padding:7px 12px;border-radius:999px;border:1px solid rgba(125,245,196,.4);background:rgba(8,10,9,.84);color:var(--lime);font:600 12px var(--ui);opacity:0;transform:translateY(6px);transition:opacity .3s ease,transform .4s var(--ease);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.project-card:hover .shot-visit,.project-shot:focus-visible .shot-visit{opacity:1;transform:none}
+.shot-fallback{position:absolute;inset:0;display:none;place-items:center;background:radial-gradient(ellipse at 50% 40%,rgba(0,200,120,.22),transparent 60%),linear-gradient(135deg,#111A13,#0A0B09)}
+.fb-mark{font:500 clamp(4rem,9vw,6.5rem)/1 var(--display);color:var(--lime)}.fb-mark span{color:var(--warm,#E2C57E)}
+.no-shot .shot-view img{display:none}.no-shot .shot-fallback{display:grid}
+@media(hover:none){.shot-visit{opacity:1;transform:none}.project-shot{transform:none}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- About: portrait with scroll-linked aperture reveal ---------- */
+.about-inner{grid-template-columns:minmax(250px,.8fr) 1.5fr .95fr}
+.about-photo{margin:0;align-self:center;max-width:380px;width:100%}
+.about-photo-frame{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:6px;border:1px solid rgba(125,245,196,.28);background:#0A0F0C;box-shadow:0 30px 70px rgba(0,0,0,.5),0 0 60px rgba(0,200,120,.08)}
+.about-photo-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 22%;clip-path:inset(calc((1 - var(--p,1)) * 30%) round 4px);filter:grayscale(calc(1 - var(--p,1))) contrast(1.04);transform:scale(calc(1.16 - .16 * var(--p,1)))}
+.about-photo-frame::before,.about-photo-frame::after{content:"";position:absolute;z-index:2;width:26px;height:26px;border:0 solid var(--warm,#E2C57E);pointer-events:none}
+.about-photo-frame::before{left:10px;top:10px;border-width:1px 0 0 1px}
+.about-photo-frame::after{right:10px;bottom:10px;border-width:0 1px 1px 0}
+.about-photo figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:14px;font:500 11.5px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#A8B5A5}
+.about-photo figcaption span:first-child{color:var(--lime)}
+@media(max-width:1100px){.about-inner{grid-template-columns:minmax(200px,.7fr) 1.4fr}.about-photo{grid-row:span 2}}
+@media(max-width:680px){.about-inner{grid-template-columns:1fr}.about-photo{max-width:320px;grid-row:auto}}
+
+@media(prefers-reduced-motion:reduce){
+  .split .wi{transform:none;transition:none}
+  .about-photo-frame img{clip-path:none;filter:none;transform:none}
+  .project-shot{transform:none!important}.shot-view img{transition:none}
+}
