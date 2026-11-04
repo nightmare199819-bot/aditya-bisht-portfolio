@@ -1,14 +1,28 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-04T16:02:15.569893+00:00",
+  "updatedAt": "2026-11-04T22:04:43.243582+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 58,
-    "easySolved": 36,
+    "totalSolved": 60,
+    "easySolved": 38,
     "mediumSolved": 19,
     "hardSolved": 3
   },
   "recent": [
+    {
+      "title": "Reverse Bits",
+      "titleSlug": "reverse-bits",
+      "date": "2026-11-04T18:07:43+00:00",
+      "url": "https://leetcode.com/problems/reverse-bits",
+      "status": "Accepted"
+    },
+    {
+      "title": "Excel Sheet Column Number",
+      "titleSlug": "excel-sheet-column-number",
+      "date": "2026-11-04T18:00:28+00:00",
+      "url": "https://leetcode.com/problems/excel-sheet-column-number",
+      "status": "Accepted"
+    },
     {
       "title": "Majority Element",
       "titleSlug": "majority-element",
@@ -28,20 +42,6 @@
       "titleSlug": "intersection-of-two-linked-lists",
       "date": "2026-11-03T17:03:58+00:00",
       "url": "https://leetcode.com/problems/intersection-of-two-linked-lists",
-      "status": "Accepted"
-    },
-    {
-      "title": "Merge k Sorted Lists",
-      "titleSlug": "merge-k-sorted-lists",
-      "date": "2026-11-03T17:01:42+00:00",
-      "url": "https://leetcode.com/problems/merge-k-sorted-lists",
-      "status": "Accepted"
-    },
-    {
-      "title": "Regular Expression Matching",
-      "titleSlug": "regular-expression-matching",
-      "date": "2026-11-03T17:01:23+00:00",
-      "url": "https://leetcode.com/problems/regular-expression-matching",
       "status": "Accepted"
     }
   ]
