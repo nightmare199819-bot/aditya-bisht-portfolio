@@ -1,47 +1,47 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-03T11:59:17.426012+00:00",
+  "updatedAt": "2026-11-04T01:15:01.963198+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 44,
-    "easySolved": 33,
-    "mediumSolved": 11,
-    "hardSolved": 0
+    "totalSolved": 58,
+    "easySolved": 36,
+    "mediumSolved": 19,
+    "hardSolved": 3
   },
   "recent": [
     {
-      "title": "3Sum Closest",
-      "titleSlug": "3sum-closest",
-      "date": "2026-11-02T18:04:34+00:00",
-      "url": "https://leetcode.com/problems/3sum-closest",
+      "title": "Majority Element",
+      "titleSlug": "majority-element",
+      "date": "2026-11-03T17:04:35+00:00",
+      "url": "https://leetcode.com/problems/majority-element",
       "status": "Accepted"
     },
     {
-      "title": "3Sum",
-      "titleSlug": "3sum",
-      "date": "2026-11-02T18:04:04+00:00",
-      "url": "https://leetcode.com/problems/3sum",
+      "title": "Excel Sheet Column Title",
+      "titleSlug": "excel-sheet-column-title",
+      "date": "2026-11-03T17:04:21+00:00",
+      "url": "https://leetcode.com/problems/excel-sheet-column-title",
       "status": "Accepted"
     },
     {
-      "title": "Integer to Roman",
-      "titleSlug": "integer-to-roman",
-      "date": "2026-11-02T18:02:21+00:00",
-      "url": "https://leetcode.com/problems/integer-to-roman",
+      "title": "Intersection of Two Linked Lists",
+      "titleSlug": "intersection-of-two-linked-lists",
+      "date": "2026-11-03T17:03:58+00:00",
+      "url": "https://leetcode.com/problems/intersection-of-two-linked-lists",
       "status": "Accepted"
     },
     {
-      "title": "String to Integer (atoi)",
-      "titleSlug": "string-to-integer-atoi",
-      "date": "2026-11-02T17:58:13+00:00",
-      "url": "https://leetcode.com/problems/string-to-integer-atoi",
+      "title": "Merge k Sorted Lists",
+      "titleSlug": "merge-k-sorted-lists",
+      "date": "2026-11-03T17:01:42+00:00",
+      "url": "https://leetcode.com/problems/merge-k-sorted-lists",
       "status": "Accepted"
     },
     {
-      "title": "Zigzag Conversion",
-      "titleSlug": "zigzag-conversion",
-      "date": "2026-11-02T17:57:56+00:00",
-      "url": "https://leetcode.com/problems/zigzag-conversion",
+      "title": "Regular Expression Matching",
+      "titleSlug": "regular-expression-matching",
+      "date": "2026-11-03T17:01:23+00:00",
+      "url": "https://leetcode.com/problems/regular-expression-matching",
       "status": "Accepted"
     }
   ]
