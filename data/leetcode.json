@@ -1,14 +1,28 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-05T10:30:28.549671+00:00",
+  "updatedAt": "2026-11-05T18:34:42.908244+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 60,
-    "easySolved": 38,
+    "totalSolved": 62,
+    "easySolved": 40,
     "mediumSolved": 19,
     "hardSolved": 3
   },
   "recent": [
+    {
+      "title": "Happy Number",
+      "titleSlug": "happy-number",
+      "date": "2026-11-05T17:52:56+00:00",
+      "url": "https://leetcode.com/problems/happy-number",
+      "status": "Accepted"
+    },
+    {
+      "title": "Number of 1 Bits",
+      "titleSlug": "number-of-1-bits",
+      "date": "2026-11-05T17:45:35+00:00",
+      "url": "https://leetcode.com/problems/number-of-1-bits",
+      "status": "Accepted"
+    },
     {
       "title": "Reverse Bits",
       "titleSlug": "reverse-bits",
@@ -28,20 +42,6 @@
       "titleSlug": "majority-element",
       "date": "2026-11-03T17:04:35+00:00",
       "url": "https://leetcode.com/problems/majority-element",
-      "status": "Accepted"
-    },
-    {
-      "title": "Excel Sheet Column Title",
-      "titleSlug": "excel-sheet-column-title",
-      "date": "2026-11-03T17:04:21+00:00",
-      "url": "https://leetcode.com/problems/excel-sheet-column-title",
-      "status": "Accepted"
-    },
-    {
-      "title": "Intersection of Two Linked Lists",
-      "titleSlug": "intersection-of-two-linked-lists",
-      "date": "2026-11-03T17:03:58+00:00",
-      "url": "https://leetcode.com/problems/intersection-of-two-linked-lists",
       "status": "Accepted"
     }
   ]
