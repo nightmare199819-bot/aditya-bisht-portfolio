@@ -1,14 +1,28 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-06T14:30:22.717762+00:00",
+  "updatedAt": "2026-11-06T20:44:09.177259+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 62,
-    "easySolved": 40,
+    "totalSolved": 64,
+    "easySolved": 42,
     "mediumSolved": 19,
     "hardSolved": 3
   },
   "recent": [
+    {
+      "title": "Isomorphic Strings",
+      "titleSlug": "isomorphic-strings",
+      "date": "2026-11-06T17:47:42+00:00",
+      "url": "https://leetcode.com/problems/isomorphic-strings",
+      "status": "Accepted"
+    },
+    {
+      "title": "Remove Linked List Elements",
+      "titleSlug": "remove-linked-list-elements",
+      "date": "2026-11-06T17:46:48+00:00",
+      "url": "https://leetcode.com/problems/remove-linked-list-elements",
+      "status": "Accepted"
+    },
     {
       "title": "Happy Number",
       "titleSlug": "happy-number",
@@ -28,20 +42,6 @@
       "titleSlug": "reverse-bits",
       "date": "2026-11-04T18:07:43+00:00",
       "url": "https://leetcode.com/problems/reverse-bits",
-      "status": "Accepted"
-    },
-    {
-      "title": "Excel Sheet Column Number",
-      "titleSlug": "excel-sheet-column-number",
-      "date": "2026-11-04T18:00:28+00:00",
-      "url": "https://leetcode.com/problems/excel-sheet-column-number",
-      "status": "Accepted"
-    },
-    {
-      "title": "Majority Element",
-      "titleSlug": "majority-element",
-      "date": "2026-11-03T17:04:35+00:00",
-      "url": "https://leetcode.com/problems/majority-element",
       "status": "Accepted"
     }
   ]
