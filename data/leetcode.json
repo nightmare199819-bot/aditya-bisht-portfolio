@@ -1,14 +1,28 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-07T13:47:59.989341+00:00",
+  "updatedAt": "2026-11-07T18:30:44.972823+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 64,
-    "easySolved": 42,
+    "totalSolved": 66,
+    "easySolved": 44,
     "mediumSolved": 19,
     "hardSolved": 3
   },
   "recent": [
+    {
+      "title": "Contains Duplicate",
+      "titleSlug": "contains-duplicate",
+      "date": "2026-11-07T18:01:26+00:00",
+      "url": "https://leetcode.com/problems/contains-duplicate",
+      "status": "Accepted"
+    },
+    {
+      "title": "Reverse Linked List",
+      "titleSlug": "reverse-linked-list",
+      "date": "2026-11-07T18:01:08+00:00",
+      "url": "https://leetcode.com/problems/reverse-linked-list",
+      "status": "Accepted"
+    },
     {
       "title": "Isomorphic Strings",
       "titleSlug": "isomorphic-strings",
@@ -28,20 +42,6 @@
       "titleSlug": "happy-number",
       "date": "2026-11-05T17:52:56+00:00",
       "url": "https://leetcode.com/problems/happy-number",
-      "status": "Accepted"
-    },
-    {
-      "title": "Number of 1 Bits",
-      "titleSlug": "number-of-1-bits",
-      "date": "2026-11-05T17:45:35+00:00",
-      "url": "https://leetcode.com/problems/number-of-1-bits",
-      "status": "Accepted"
-    },
-    {
-      "title": "Reverse Bits",
-      "titleSlug": "reverse-bits",
-      "date": "2026-11-04T18:07:43+00:00",
-      "url": "https://leetcode.com/problems/reverse-bits",
       "status": "Accepted"
     }
   ]
