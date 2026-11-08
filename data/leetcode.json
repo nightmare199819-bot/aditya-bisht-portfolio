@@ -1,14 +1,28 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-08T16:12:08.049100+00:00",
+  "updatedAt": "2026-11-08T20:41:06.485778+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 66,
-    "easySolved": 44,
+    "totalSolved": 68,
+    "easySolved": 46,
     "mediumSolved": 19,
     "hardSolved": 3
   },
   "recent": [
+    {
+      "title": "Implement Stack using Queues",
+      "titleSlug": "implement-stack-using-queues",
+      "date": "2026-11-08T17:28:00+00:00",
+      "url": "https://leetcode.com/problems/implement-stack-using-queues",
+      "status": "Accepted"
+    },
+    {
+      "title": "Contains Duplicate II",
+      "titleSlug": "contains-duplicate-ii",
+      "date": "2026-11-08T17:27:42+00:00",
+      "url": "https://leetcode.com/problems/contains-duplicate-ii",
+      "status": "Accepted"
+    },
     {
       "title": "Contains Duplicate",
       "titleSlug": "contains-duplicate",
@@ -28,20 +42,6 @@
       "titleSlug": "isomorphic-strings",
       "date": "2026-11-06T17:47:42+00:00",
       "url": "https://leetcode.com/problems/isomorphic-strings",
-      "status": "Accepted"
-    },
-    {
-      "title": "Remove Linked List Elements",
-      "titleSlug": "remove-linked-list-elements",
-      "date": "2026-11-06T17:46:48+00:00",
-      "url": "https://leetcode.com/problems/remove-linked-list-elements",
-      "status": "Accepted"
-    },
-    {
-      "title": "Happy Number",
-      "titleSlug": "happy-number",
-      "date": "2026-11-05T17:52:56+00:00",
-      "url": "https://leetcode.com/problems/happy-number",
       "status": "Accepted"
     }
   ]
