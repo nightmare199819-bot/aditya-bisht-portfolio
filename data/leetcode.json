@@ -1,14 +1,28 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-09T07:43:49.410007+00:00",
+  "updatedAt": "2026-11-09T18:29:13.542979+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 68,
+    "totalSolved": 70,
     "easySolved": 46,
     "mediumSolved": 19,
-    "hardSolved": 3
+    "hardSolved": 5
   },
   "recent": [
+    {
+      "title": "Substring with Concatenation of All Words",
+      "titleSlug": "substring-with-concatenation-of-all-words",
+      "date": "2026-11-09T17:58:49+00:00",
+      "url": "https://leetcode.com/problems/substring-with-concatenation-of-all-words",
+      "status": "Accepted"
+    },
+    {
+      "title": "Reverse Nodes in k-Group",
+      "titleSlug": "reverse-nodes-in-k-group",
+      "date": "2026-11-09T17:58:16+00:00",
+      "url": "https://leetcode.com/problems/reverse-nodes-in-k-group",
+      "status": "Accepted"
+    },
     {
       "title": "Implement Stack using Queues",
       "titleSlug": "implement-stack-using-queues",
@@ -28,20 +42,6 @@
       "titleSlug": "contains-duplicate",
       "date": "2026-11-07T18:01:26+00:00",
       "url": "https://leetcode.com/problems/contains-duplicate",
-      "status": "Accepted"
-    },
-    {
-      "title": "Reverse Linked List",
-      "titleSlug": "reverse-linked-list",
-      "date": "2026-11-07T18:01:08+00:00",
-      "url": "https://leetcode.com/problems/reverse-linked-list",
-      "status": "Accepted"
-    },
-    {
-      "title": "Isomorphic Strings",
-      "titleSlug": "isomorphic-strings",
-      "date": "2026-11-06T17:47:42+00:00",
-      "url": "https://leetcode.com/problems/isomorphic-strings",
       "status": "Accepted"
     }
   ]
