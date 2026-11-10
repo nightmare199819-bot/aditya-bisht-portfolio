@@ -1,14 +1,28 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-10T17:14:16.220325+00:00",
+  "updatedAt": "2026-11-10T22:28:47.293459+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 70,
-    "easySolved": 46,
+    "totalSolved": 72,
+    "easySolved": 48,
     "mediumSolved": 19,
     "hardSolved": 5
   },
   "recent": [
+    {
+      "title": "Summary Ranges",
+      "titleSlug": "summary-ranges",
+      "date": "2026-11-10T19:58:22+00:00",
+      "url": "https://leetcode.com/problems/summary-ranges",
+      "status": "Accepted"
+    },
+    {
+      "title": "Invert Binary Tree",
+      "titleSlug": "invert-binary-tree",
+      "date": "2026-11-10T18:08:54+00:00",
+      "url": "https://leetcode.com/problems/invert-binary-tree",
+      "status": "Accepted"
+    },
     {
       "title": "Substring with Concatenation of All Words",
       "titleSlug": "substring-with-concatenation-of-all-words",
@@ -28,20 +42,6 @@
       "titleSlug": "implement-stack-using-queues",
       "date": "2026-11-08T17:28:00+00:00",
       "url": "https://leetcode.com/problems/implement-stack-using-queues",
-      "status": "Accepted"
-    },
-    {
-      "title": "Contains Duplicate II",
-      "titleSlug": "contains-duplicate-ii",
-      "date": "2026-11-08T17:27:42+00:00",
-      "url": "https://leetcode.com/problems/contains-duplicate-ii",
-      "status": "Accepted"
-    },
-    {
-      "title": "Contains Duplicate",
-      "titleSlug": "contains-duplicate",
-      "date": "2026-11-07T18:01:26+00:00",
-      "url": "https://leetcode.com/problems/contains-duplicate",
       "status": "Accepted"
     }
   ]
