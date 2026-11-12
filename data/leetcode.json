@@ -1,14 +1,21 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-11T17:45:33.259963+00:00",
+  "updatedAt": "2026-11-12T00:13:58.253847+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 72,
+    "totalSolved": 73,
     "easySolved": 48,
     "mediumSolved": 19,
-    "hardSolved": 5
+    "hardSolved": 6
   },
   "recent": [
+    {
+      "title": "Longest Valid Parentheses",
+      "titleSlug": "longest-valid-parentheses",
+      "date": "2026-11-11T18:45:19+00:00",
+      "url": "https://leetcode.com/problems/longest-valid-parentheses",
+      "status": "Accepted"
+    },
     {
       "title": "Summary Ranges",
       "titleSlug": "summary-ranges",
@@ -35,13 +42,6 @@
       "titleSlug": "reverse-nodes-in-k-group",
       "date": "2026-11-09T17:58:16+00:00",
       "url": "https://leetcode.com/problems/reverse-nodes-in-k-group",
-      "status": "Accepted"
-    },
-    {
-      "title": "Implement Stack using Queues",
-      "titleSlug": "implement-stack-using-queues",
-      "date": "2026-11-08T17:28:00+00:00",
-      "url": "https://leetcode.com/problems/implement-stack-using-queues",
       "status": "Accepted"
     }
   ]
