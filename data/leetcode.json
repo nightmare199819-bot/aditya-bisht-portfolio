@@ -1,14 +1,21 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-12T16:39:36.619189+00:00",
+  "updatedAt": "2026-11-12T22:37:46.309804+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 73,
+    "totalSolved": 74,
     "easySolved": 48,
     "mediumSolved": 19,
-    "hardSolved": 6
+    "hardSolved": 7
   },
   "recent": [
+    {
+      "title": "Sudoku Solver",
+      "titleSlug": "sudoku-solver",
+      "date": "2026-11-12T20:10:44+00:00",
+      "url": "https://leetcode.com/problems/sudoku-solver",
+      "status": "Accepted"
+    },
     {
       "title": "Longest Valid Parentheses",
       "titleSlug": "longest-valid-parentheses",
@@ -35,13 +42,6 @@
       "titleSlug": "substring-with-concatenation-of-all-words",
       "date": "2026-11-09T17:58:49+00:00",
       "url": "https://leetcode.com/problems/substring-with-concatenation-of-all-words",
-      "status": "Accepted"
-    },
-    {
-      "title": "Reverse Nodes in k-Group",
-      "titleSlug": "reverse-nodes-in-k-group",
-      "date": "2026-11-09T17:58:16+00:00",
-      "url": "https://leetcode.com/problems/reverse-nodes-in-k-group",
       "status": "Accepted"
     }
   ]
