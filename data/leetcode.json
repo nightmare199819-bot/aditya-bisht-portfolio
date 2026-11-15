@@ -1,14 +1,21 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-15T17:36:34.995803+00:00",
+  "updatedAt": "2026-11-15T22:36:26.402863+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 76,
-    "easySolved": 49,
+    "totalSolved": 77,
+    "easySolved": 50,
     "mediumSolved": 19,
     "hardSolved": 8
   },
   "recent": [
+    {
+      "title": "Implement Queue using Stacks",
+      "titleSlug": "implement-queue-using-stacks",
+      "date": "2026-11-15T19:20:35+00:00",
+      "url": "https://leetcode.com/problems/implement-queue-using-stacks",
+      "status": "Accepted"
+    },
     {
       "title": "Power of Two",
       "titleSlug": "power-of-two",
@@ -35,13 +42,6 @@
       "titleSlug": "longest-valid-parentheses",
       "date": "2026-11-11T18:45:19+00:00",
       "url": "https://leetcode.com/problems/longest-valid-parentheses",
-      "status": "Accepted"
-    },
-    {
-      "title": "Summary Ranges",
-      "titleSlug": "summary-ranges",
-      "date": "2026-11-10T19:58:22+00:00",
-      "url": "https://leetcode.com/problems/summary-ranges",
       "status": "Accepted"
     }
   ]
