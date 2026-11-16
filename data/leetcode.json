@@ -1,14 +1,21 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-16T10:47:00.614151+00:00",
+  "updatedAt": "2026-11-16T20:50:47.637479+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 77,
-    "easySolved": 50,
+    "totalSolved": 78,
+    "easySolved": 51,
     "mediumSolved": 19,
     "hardSolved": 8
   },
   "recent": [
+    {
+      "title": "Palindrome Linked List",
+      "titleSlug": "palindrome-linked-list",
+      "date": "2026-11-16T18:32:12+00:00",
+      "url": "https://leetcode.com/problems/palindrome-linked-list",
+      "status": "Accepted"
+    },
     {
       "title": "Implement Queue using Stacks",
       "titleSlug": "implement-queue-using-stacks",
@@ -35,13 +42,6 @@
       "titleSlug": "sudoku-solver",
       "date": "2026-11-12T20:10:44+00:00",
       "url": "https://leetcode.com/problems/sudoku-solver",
-      "status": "Accepted"
-    },
-    {
-      "title": "Longest Valid Parentheses",
-      "titleSlug": "longest-valid-parentheses",
-      "date": "2026-11-11T18:45:19+00:00",
-      "url": "https://leetcode.com/problems/longest-valid-parentheses",
       "status": "Accepted"
     }
   ]
