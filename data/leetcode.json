@@ -1,14 +1,21 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-17T12:23:11.983627+00:00",
+  "updatedAt": "2026-11-17T21:14:45.227603+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 78,
+    "totalSolved": 79,
     "easySolved": 51,
     "mediumSolved": 19,
-    "hardSolved": 8
+    "hardSolved": 9
   },
   "recent": [
+    {
+      "title": "Trapping Rain Water",
+      "titleSlug": "trapping-rain-water",
+      "date": "2026-11-17T16:38:26+00:00",
+      "url": "https://leetcode.com/problems/trapping-rain-water",
+      "status": "Accepted"
+    },
     {
       "title": "Palindrome Linked List",
       "titleSlug": "palindrome-linked-list",
@@ -35,13 +42,6 @@
       "titleSlug": "first-missing-positive",
       "date": "2026-11-13T18:25:33+00:00",
       "url": "https://leetcode.com/problems/first-missing-positive",
-      "status": "Accepted"
-    },
-    {
-      "title": "Sudoku Solver",
-      "titleSlug": "sudoku-solver",
-      "date": "2026-11-12T20:10:44+00:00",
-      "url": "https://leetcode.com/problems/sudoku-solver",
       "status": "Accepted"
     }
   ]
