@@ -1,14 +1,21 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-19T10:40:00.797618+00:00",
+  "updatedAt": "2026-11-19T19:24:25.017997+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 79,
-    "easySolved": 51,
+    "totalSolved": 80,
+    "easySolved": 52,
     "mediumSolved": 19,
     "hardSolved": 9
   },
   "recent": [
+    {
+      "title": "Valid Anagram",
+      "titleSlug": "valid-anagram",
+      "date": "2026-11-19T17:58:42+00:00",
+      "url": "https://leetcode.com/problems/valid-anagram",
+      "status": "Accepted"
+    },
     {
       "title": "Trapping Rain Water",
       "titleSlug": "trapping-rain-water",
@@ -35,13 +42,6 @@
       "titleSlug": "power-of-two",
       "date": "2026-11-14T20:03:12+00:00",
       "url": "https://leetcode.com/problems/power-of-two",
-      "status": "Accepted"
-    },
-    {
-      "title": "First Missing Positive",
-      "titleSlug": "first-missing-positive",
-      "date": "2026-11-13T18:25:33+00:00",
-      "url": "https://leetcode.com/problems/first-missing-positive",
       "status": "Accepted"
     }
   ]
