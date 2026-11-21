@@ -1,14 +1,21 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-21T14:52:10.044153+00:00",
+  "updatedAt": "2026-11-21T20:49:16.897233+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 81,
-    "easySolved": 53,
+    "totalSolved": 82,
+    "easySolved": 54,
     "mediumSolved": 19,
     "hardSolved": 9
   },
   "recent": [
+    {
+      "title": "Add Digits",
+      "titleSlug": "add-digits",
+      "date": "2026-11-21T20:18:30+00:00",
+      "url": "https://leetcode.com/problems/add-digits",
+      "status": "Accepted"
+    },
     {
       "title": "Binary Tree Paths",
       "titleSlug": "binary-tree-paths",
@@ -35,13 +42,6 @@
       "titleSlug": "palindrome-linked-list",
       "date": "2026-11-16T18:32:12+00:00",
       "url": "https://leetcode.com/problems/palindrome-linked-list",
-      "status": "Accepted"
-    },
-    {
-      "title": "Implement Queue using Stacks",
-      "titleSlug": "implement-queue-using-stacks",
-      "date": "2026-11-15T19:20:35+00:00",
-      "url": "https://leetcode.com/problems/implement-queue-using-stacks",
       "status": "Accepted"
     }
   ]
