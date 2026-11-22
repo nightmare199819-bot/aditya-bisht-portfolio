@@ -1,14 +1,21 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-22T16:57:31.359654+00:00",
+  "updatedAt": "2026-11-22T22:23:30.837953+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 82,
+    "totalSolved": 83,
     "easySolved": 54,
     "mediumSolved": 19,
-    "hardSolved": 9
+    "hardSolved": 10
   },
   "recent": [
+    {
+      "title": "Wildcard Matching",
+      "titleSlug": "wildcard-matching",
+      "date": "2026-11-22T17:50:59+00:00",
+      "url": "https://leetcode.com/problems/wildcard-matching",
+      "status": "Accepted"
+    },
     {
       "title": "Add Digits",
       "titleSlug": "add-digits",
@@ -35,13 +42,6 @@
       "titleSlug": "trapping-rain-water",
       "date": "2026-11-17T16:38:26+00:00",
       "url": "https://leetcode.com/problems/trapping-rain-water",
-      "status": "Accepted"
-    },
-    {
-      "title": "Palindrome Linked List",
-      "titleSlug": "palindrome-linked-list",
-      "date": "2026-11-16T18:32:12+00:00",
-      "url": "https://leetcode.com/problems/palindrome-linked-list",
       "status": "Accepted"
     }
   ]
