@@ -1,14 +1,21 @@
 {
   "source": "live",
-  "updatedAt": "2026-11-23T12:14:26.257422+00:00",
+  "updatedAt": "2026-11-24T00:13:22.355301+00:00",
   "profile": "aditya__bisht",
   "stats": {
-    "totalSolved": 83,
+    "totalSolved": 84,
     "easySolved": 54,
     "mediumSolved": 19,
-    "hardSolved": 10
+    "hardSolved": 11
   },
   "recent": [
+    {
+      "title": "N-Queens",
+      "titleSlug": "n-queens",
+      "date": "2026-11-23T18:43:15+00:00",
+      "url": "https://leetcode.com/problems/n-queens",
+      "status": "Accepted"
+    },
     {
       "title": "Wildcard Matching",
       "titleSlug": "wildcard-matching",
@@ -35,13 +42,6 @@
       "titleSlug": "valid-anagram",
       "date": "2026-11-19T17:58:42+00:00",
       "url": "https://leetcode.com/problems/valid-anagram",
-      "status": "Accepted"
-    },
-    {
-      "title": "Trapping Rain Water",
-      "titleSlug": "trapping-rain-water",
-      "date": "2026-11-17T16:38:26+00:00",
-      "url": "https://leetcode.com/problems/trapping-rain-water",
       "status": "Accepted"
     }
   ]
